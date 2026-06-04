@@ -24,11 +24,13 @@ export const metadata: Metadata = {
     title: 'Timothy Lok — Builder & Technical PM',
     description: 'Portfolio of projects built with Claude Code. Based in Auckland, NZ.',
     type: 'website',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Timothy Lok — Builder & Technical PM',
     description: 'Portfolio of projects built with Claude Code. Based in Auckland, NZ.',
+    images: ['/og-image.jpg'],
   },
 }
 

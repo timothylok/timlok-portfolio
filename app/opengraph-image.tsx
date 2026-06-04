@@ -4,8 +4,19 @@ export const runtime = 'edge'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-export default function Image() {
-  const imgSrc = 'https://raw.githubusercontent.com/timothylok/timlok-portfolio/master/public/images/tim-lok-mountain.jpeg'
+const GITHUB_RAW_IMG =
+  'https://raw.githubusercontent.com/timothylok/timlok-portfolio/master/public/images/tim-lok-mountain.jpeg'
+
+export default async function Image() {
+  // Fetch from GitHub raw — external URL, not self-referential, reliably accessible from edge
+  const res = await fetch(GITHUB_RAW_IMG)
+  const buf = await res.arrayBuffer()
+  const bytes = new Uint8Array(buf)
+  let binary = ''
+  for (let i = 0; i < bytes.length; i += 8192) {
+    binary += String.fromCharCode(...Array.from(bytes.subarray(i, i + 8192)))
+  }
+  const src = `data:image/jpeg;base64,${btoa(binary)}`
 
   return new ImageResponse(
     (
@@ -16,10 +27,9 @@ export default function Image() {
           height: 630,
           position: 'relative',
           backgroundColor: '#0A0A0A',
-          backgroundImage: `url(${imgSrc})`,
-          backgroundSize: '1200px 900px',
-          backgroundPosition: 'top center',
-          backgroundRepeat: 'no-repeat',
+          backgroundImage: `url(${src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'top',
         }}
       >
         {/* Gradient rising from bottom */}

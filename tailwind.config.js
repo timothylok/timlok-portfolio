@@ -30,6 +30,18 @@ module.exports = {
           DEFAULT: 'var(--muted)',
           foreground: 'var(--muted-foreground)',
         },
+        popover: {
+          DEFAULT: 'var(--popover)',
+          foreground: 'var(--popover-foreground)',
+        },
+        accent: {
+          DEFAULT: 'var(--accent)',
+          foreground: 'var(--accent-foreground)',
+        },
+        destructive: {
+          DEFAULT: 'var(--destructive)',
+        },
+        input: 'var(--input)',
         border: 'var(--border)',
         ring: 'var(--ring)',
       },

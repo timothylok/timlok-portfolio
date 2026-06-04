@@ -20,7 +20,7 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://timlok-portfolio.vercel.app'),
   icons: {
-    icon: [{ url: '/favicon.png', type: 'image/png' }],
+    icon: [{ url: '/favicon.png', type: 'image/png', sizes: '512x512' }],
     apple: [{ url: '/favicon.png' }],
   },
   title: 'Timothy Lok — Builder & Technical PM',

@@ -5,7 +5,15 @@ export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
 export default async function Image() {
-  const imgSrc = 'https://timlok-portfolio.vercel.app/images/tim-lok-mountain.jpeg'
+  const imgUrl = 'https://timlok-portfolio.vercel.app/images/tim-lok-mountain.jpeg'
+  const res = await fetch(imgUrl)
+  const buffer = await res.arrayBuffer()
+  const bytes = new Uint8Array(buffer)
+  let binary = ''
+  for (let i = 0; i < bytes.length; i += 8192) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + 8192))
+  }
+  const src = `data:image/jpeg;base64,${btoa(binary)}`
 
   return new ImageResponse(
     (
@@ -16,7 +24,7 @@ export default async function Image() {
           height: 630,
           position: 'relative',
           backgroundColor: '#0A0A0A',
-          backgroundImage: `url(${imgSrc})`,
+          backgroundImage: `url(${src})`,
           backgroundSize: '1200px 900px',
           backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',

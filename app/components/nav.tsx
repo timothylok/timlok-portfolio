@@ -6,6 +6,7 @@ export default function Nav() {
         <div className="flex items-center gap-6 text-sm text-foreground/50">
           <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
           <a href="#about" className="hover:text-foreground transition-colors">About</a>
+          <a href="/contact" className="hover:text-foreground transition-colors">Contact</a>
           <a
             href="https://github.com/timothylok"
             target="_blank"

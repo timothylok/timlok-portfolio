@@ -3,8 +3,8 @@ export default function Footer() {
     <footer className="border-t border-white/10">
       <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-foreground/40 font-mono">
         <div className="flex items-center gap-5">
-          <a href="mailto:timlok@gmail.com" className="hover:text-foreground/70 transition-colors">
-            timlok@gmail.com
+          <a href="/contact" className="text-foreground/60 hover:text-foreground transition-colors">
+            Let's build something together →
           </a>
           <a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" className="hover:text-foreground/70 transition-colors">
             LinkedIn

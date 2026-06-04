@@ -40,10 +40,10 @@ export default function Hero() {
 
         <motion.div {...fadeUp(0.3)} className="flex flex-wrap items-center gap-3">
           <Button
-            render={<a href="#projects" />}
+            render={<a href="/contact" />}
             className="rounded-full px-5 py-2.5 h-auto bg-white text-black hover:bg-white/90"
           >
-            View projects
+            Work with me →
           </Button>
           <Button
             variant="outline"

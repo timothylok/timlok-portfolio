@@ -19,6 +19,10 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://timlok-portfolio.vercel.app'),
+  icons: {
+    icon: [{ url: '/favicon.png', type: 'image/png' }],
+    apple: [{ url: '/favicon.png' }],
+  },
   title: 'Timothy Lok — Builder & Technical PM',
   description: 'Portfolio of projects built with Claude Code. Ex-Java developer, Technical Project Manager, AI-assisted builder based in Auckland, NZ.',
   openGraph: {

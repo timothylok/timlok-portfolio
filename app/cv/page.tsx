@@ -21,9 +21,9 @@ export default function CVPage() {
           <h1 className="text-4xl font-light text-foreground mb-2">{SITE_NAME}</h1>
           <p className="text-foreground/50 mb-5">Auckland, New Zealand · AI Automation Engineer · Technical PM · Multi-Agent Systems Builder</p>
           <div className="flex flex-wrap gap-5 text-sm font-mono text-foreground/40">
-            <a href="https://timlok-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground/70 transition-colors">timlok-portfolio.vercel.app ↗</a>
-            <a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" className="hover:text-foreground/70 transition-colors">linkedin.com/in/timlok ↗</a>
-            <a href="https://github.com/timothylok" target="_blank" rel="noopener noreferrer" className="hover:text-foreground/70 transition-colors">github.com/timothylok ↗</a>
+            <a href="https://timlok-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" data-umami-event="CV: Portfolio Link" className="hover:text-foreground/70 transition-colors">timlok-portfolio.vercel.app ↗</a>
+            <a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" data-umami-event="CV: LinkedIn" className="hover:text-foreground/70 transition-colors">linkedin.com/in/timlok ↗</a>
+            <a href="https://github.com/timothylok" target="_blank" rel="noopener noreferrer" data-umami-event="CV: GitHub" className="hover:text-foreground/70 transition-colors">github.com/timothylok ↗</a>
           </div>
         </header>
 
@@ -117,6 +117,7 @@ export default function CVPage() {
           href="https://timlok-portfolio.vercel.app/#projects"
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="CV: Full Portfolio"
           className="text-xs font-mono text-foreground/40 hover:text-foreground/70 transition-colors"
         >
           View full portfolio ↗

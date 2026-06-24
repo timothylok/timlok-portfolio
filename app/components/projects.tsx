@@ -30,6 +30,8 @@ export default function Projects() {
           <button
             key={tag}
             onClick={() => setActiveTag(tag)}
+            data-umami-event="Filter Click"
+            data-umami-event-tag={tag}
             className={cn(
               'text-xs font-mono px-3 py-1.5 rounded-full border transition-colors',
               activeTag === tag
@@ -73,6 +75,8 @@ export default function Projects() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      data-umami-event="Project: Live Link"
+                      data-umami-event-project={project.title}
                       className="text-xs text-foreground/40 hover:text-foreground/70 transition-colors"
 >
                       live ↗
@@ -90,6 +94,8 @@ export default function Projects() {
                   <button
                     key={tag}
                     onClick={() => setActiveTag(tag)}
+                    data-umami-event="Project: Tag Click"
+                    data-umami-event-tag={tag}
                     className="text-xs font-mono text-foreground/40 bg-white/5 border border-white/10 px-2 py-0.5 rounded hover:text-foreground/70 hover:border-white/20 transition-colors"
                   >
                     {tag}

@@ -38,7 +38,12 @@ export default function ContactForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(fields),
       })
-      setStatus(res.ok ? 'sent' : 'error')
+      if (res.ok) {
+        setStatus('sent')
+        ;(window as any).umami?.track('Contact Form Submitted')
+      } else {
+        setStatus('error')
+      }
     } catch {
       setStatus('error')
     }

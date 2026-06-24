@@ -113,6 +113,15 @@ export default function CVPage() {
           </div>
         </section>
 
+        <a
+          href="https://timlok-portfolio.vercel.app/#projects"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs font-mono text-foreground/40 hover:text-foreground/70 transition-colors"
+        >
+          View full portfolio ↗
+        </a>
+
 {/* Tech Stack */}
         <section>
           <SectionLabel>Tech Stack</SectionLabel>

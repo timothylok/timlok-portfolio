@@ -64,6 +64,19 @@ export default function CVPage() {
           </ul>
         </section>
 
+        {/* AI Governance & Safety */}
+        <section>
+          <SectionLabel>AI Governance &amp; Safety</SectionLabel>
+          <ul className="space-y-2">
+            {aiGovernance.map((item) => (
+              <li key={item} className="text-sm text-foreground/55 flex gap-2">
+                <span className="text-foreground/20 shrink-0 mt-0.5">—</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         {/* Recent Projects */}
         <section>
           <SectionLabel>Recent AI + Automation Projects</SectionLabel>
@@ -250,6 +263,14 @@ const aiFoundations = [
   'Model evaluation & safety constraints',
   'Fine-tuning workflows (conceptual)',
   'LLM orchestration & agent governance',
+]
+
+const aiGovernance = [
+  'Deterministic agent workflows',
+  'Verification layers & QC gates',
+  'Structured output enforcement',
+  'Role separation & non-self-verification',
+  'Failure recovery & retry logic',
 ]
 
 const cvProjects = [

@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import { projects } from '@/app/data/projects'
 
 const stats = [
-  { value: '16', label: 'projects shipped' },
+  { value: String(projects.length), label: 'projects shipped' },
   { value: 'Next.js', label: 'primary stack' },
   { value: 'Claude Code', label: 'AI tooling' },
   { value: '~18 mo', label: 'building with AI tools' },

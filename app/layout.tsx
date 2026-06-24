@@ -19,32 +19,52 @@ const dmMono = DM_Mono({
   weight: ['400', '500'],
 })
 
+const siteUrl = 'https://timlok-portfolio.vercel.app'
+const siteTitle = `${SITE_NAME} – Technical PM & AI Automation Builder`
+const siteDescription = 'Technical PM specialising in AI automation, dashboards, and full-stack delivery. 19 projects shipped with Claude Code. Based in Auckland, NZ.'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://timlok-portfolio.vercel.app'),
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: [{ url: '/favicon.png', type: 'image/png', sizes: '512x512' }],
     apple: [{ url: '/favicon.png' }],
   },
-  title: `${SITE_NAME} — Builder & Technical PM`,
-  description: 'Portfolio of projects built with Claude Code. Ex-Java developer, Technical Project Manager, AI-assisted builder based in Auckland, NZ.',
+  title: siteTitle,
+  description: siteDescription,
   openGraph: {
-    title: `${SITE_NAME} — Builder & Technical PM`,
-    description: 'Portfolio of projects built with Claude Code. Based in Auckland, NZ.',
+    title: siteTitle,
+    description: siteDescription,
     type: 'website',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_NAME} — Builder & Technical PM`,
-    description: 'Portfolio of projects built with Claude Code. Based in Auckland, NZ.',
+    title: siteTitle,
+    description: siteDescription,
     images: ['/og-image.jpg'],
   },
+}
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Tim Lok',
+  jobTitle: 'Technical Project Manager & AI Automation Builder',
+  url: siteUrl,
+  email: 'timlok@gmail.com',
+  address: { '@type': 'PostalAddress', addressLocality: 'Auckland', addressCountry: 'NZ' },
+  sameAs: ['https://github.com/timothylok', 'https://www.linkedin.com/in/timlok'],
+  knowsAbout: ['AI automation', 'Technical project management', 'Next.js', 'Claude Code', 'Multi-agent systems', 'Python', 'TypeScript'],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`dark ${dmSans.variable} ${dmMono.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
         {children}
         <Analytics />
         <Script

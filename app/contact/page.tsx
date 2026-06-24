@@ -3,7 +3,7 @@ import { SITE_NAME } from '@/app/data/site'
 
 export const metadata = {
   title: `Contact — ${SITE_NAME}`,
-  description: `Work with ${SITE_NAME} — AI-powered apps, dashboards, and automations. Get in touch.`,
+  description: `Get in touch with ${SITE_NAME} — Technical PM, AI automation builder, and full-stack developer based in Auckland, NZ.`,
 }
 
 export default function ContactPage() {

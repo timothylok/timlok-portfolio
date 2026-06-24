@@ -12,7 +12,7 @@ export const projects: Project[] = [
     id: 18,
     title: 'FIFA 2026 World Cup Predictor',
     description: 'Full-stack tournament prediction system live at fifa2026nz.vercel.app. The model blends Elo ratings (4-year decay, class-based K-factors, shrinkage calibration), Dixon-Coles Poisson scoring, and 10,000 Monte-Carlo simulations per run — then corrects for longshot bias against live Polymarket odds. A fully automated Python pipeline runs on GitHub Actions: fetches fresh international results daily, conditions on real tournament state (played scores, eliminations, shootout winners), validates the output, and commits updated JSON to trigger a zero-downtime Vercel redeploy — no manual intervention since kickoff. A Brier score ledger tracks forecast accuracy throughout. React frontend (Vite + Tailwind + Recharts) surfaces seven data views: group standings, knockout bracket, championship probability table with bookmaker value analysis, Elo trajectories since 2018, and a daily-updated probability chart. Covered by 66 pytest unit tests and 22 Playwright browser tests run against both local and production.',
-    tags: ['Python', 'React', 'GitHub Actions', 'Vercel', 'Vite', 'Tailwind', 'Monte Carlo', 'Playwright'],
+    tags: ['Python', 'React', 'GitHub Actions', 'Vercel', 'Vite', 'Tailwind', 'Monte Carlo', 'Playwright', 'Vercel Analytics'],
     highlight: true,
     url: 'https://fifa2026nz.vercel.app',
   },
@@ -124,4 +124,7 @@ export const stack = [
   'Python', 'Node.js', 'FFmpeg', 'LangChain',
   'Claude Code', 'MCP', 'Anthropic SDK', 'Google Cloud',
   'Vercel', 'Netlify', 'Groq', 'Recharts', 'Discord',
+  'Framer Motion', 'shadcn/ui', 'Resend',
+  'Vercel Analytics', 'Umami',
+  'GitHub Actions', 'Playwright',
 ]

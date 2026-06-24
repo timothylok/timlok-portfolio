@@ -77,6 +77,19 @@ export default function CVPage() {
           </ul>
         </section>
 
+        {/* Business Impact */}
+        <section>
+          <SectionLabel>Business Impact</SectionLabel>
+          <ul className="space-y-2">
+            {businessImpact.map((item) => (
+              <li key={item} className="text-sm text-foreground/55 flex gap-2">
+                <span className="text-foreground/20 shrink-0 mt-0.5">—</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         {/* Recent Projects */}
         <section>
           <SectionLabel>Recent AI + Automation Projects</SectionLabel>
@@ -263,6 +276,13 @@ const aiFoundations = [
   'Model evaluation & safety constraints',
   'Fine-tuning workflows (conceptual)',
   'LLM orchestration & agent governance',
+]
+
+const businessImpact = [
+  'Delivered fully automated, end-to-end systems requiring zero routine human intervention.',
+  'Reduced manual workload by 80–95% through agent-based automation and workflow orchestration.',
+  'Built autonomous pipelines that scale without human oversight, with automated recovery and exception handling.',
+  'Delivered production-ready solutions in days, not months, accelerating time-to-value for clients.',
 ]
 
 const aiGovernance = [

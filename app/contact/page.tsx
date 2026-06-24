@@ -1,8 +1,9 @@
 import ContactForm from '../components/contact-form'
+import { SITE_NAME } from '@/app/data/site'
 
 export const metadata = {
-  title: 'Contact — Timothy Lok',
-  description: 'Work with Timothy Lok — AI-powered apps, dashboards, and automations. Get in touch.',
+  title: `Contact — ${SITE_NAME}`,
+  description: `Work with ${SITE_NAME} — AI-powered apps, dashboards, and automations. Get in touch.`,
 }
 
 export default function ContactPage() {

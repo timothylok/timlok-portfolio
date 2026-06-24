@@ -1,10 +1,11 @@
 import Nav from '../components/nav'
 import Footer from '../components/footer'
 import { projects } from '@/app/data/projects'
+import { SITE_NAME } from '@/app/data/site'
 
 export const metadata = {
-  title: 'CV — Timothy Lok',
-  description: 'CV of Timothy Lok — AI Automation Engineer, Technical PM, and Multi-Agent Systems Builder based in Auckland, NZ.',
+  title: `CV — ${SITE_NAME}`,
+  description: `CV of ${SITE_NAME} — AI Automation Engineer, Technical PM, and Multi-Agent Systems Builder based in Auckland, NZ.`,
 }
 
 export default function CVPage() {
@@ -17,7 +18,7 @@ export default function CVPage() {
         {/* Header */}
         <header className="border-b border-white/10 pb-10">
           <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-4">Curriculum Vitae</p>
-          <h1 className="text-4xl font-light text-foreground mb-2">Timothy Lok</h1>
+          <h1 className="text-4xl font-light text-foreground mb-2">{SITE_NAME}</h1>
           <p className="text-foreground/50 mb-5">Auckland, New Zealand · AI Automation Engineer · Technical PM · Multi-Agent Systems Builder</p>
           <div className="flex flex-wrap gap-5 text-sm font-mono text-foreground/40">
             <a href="https://timlok-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground/70 transition-colors">timlok-portfolio.vercel.app ↗</a>

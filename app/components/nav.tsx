@@ -8,6 +8,7 @@ export default function Nav() {
         <div className="flex items-center gap-6 text-sm text-foreground/50">
           <a href="/#projects" data-umami-event="Nav: Projects" className="hover:text-foreground transition-colors">Projects</a>
           <a href="/#about" data-umami-event="Nav: About" className="hover:text-foreground transition-colors">About</a>
+          <a href="/CaseStudies" data-umami-event="Nav: Case Studies" className="hover:text-foreground transition-colors">Case Studies</a>
           <a href="/cv" data-umami-event="Nav: CV" className="hover:text-foreground transition-colors">CV</a>
           <a href="/contact" data-umami-event="Nav: Contact" className="hover:text-foreground transition-colors">Contact</a>
           <a

@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { track } from '@vercel/analytics'
 import { projects } from '@/app/data/projects'
 import { cn } from '@/lib/utils'
 
@@ -75,8 +74,7 @@ export default function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs text-foreground/40 hover:text-foreground/70 transition-colors"
-                      onClick={() => track('Project Link Click', { project: project.title, url: project.url })}
-                    >
+>
                       live ↗
                     </a>
                   )}

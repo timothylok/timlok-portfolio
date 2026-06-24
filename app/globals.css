@@ -21,6 +21,57 @@ body {
   color: #ffffff;
 }
 
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm 2cm;
+  }
+
+  /* Flip dark CSS variables to light so all opacity-based colors render correctly on white */
+  html {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.12 0 0);
+    --card: oklch(0.95 0 0);
+    --card-foreground: oklch(0.12 0 0);
+    --border: oklch(0.75 0 0);
+  }
+
+  body {
+    background: white !important;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  nav,
+  footer {
+    display: none !important;
+  }
+
+  * {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Keep project/work entries together across page breaks */
+  section {
+    break-inside: avoid;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* Suppress URL expansion that browsers add after links */
+  a::after {
+    display: none !important;
+  }
+}
+
 @layer base {
   .theme {
     --font-heading: var(--font-sans);

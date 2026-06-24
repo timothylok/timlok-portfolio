@@ -1,5 +1,6 @@
 import Nav from '../components/nav'
 import Footer from '../components/footer'
+import { projects } from '@/app/data/projects'
 
 export const metadata = {
   title: 'CV — Timothy Lok',
@@ -92,20 +93,20 @@ export default function CVPage() {
 
         {/* Recent Projects */}
         <section>
-          <SectionLabel>Recent AI + Automation Projects</SectionLabel>
+          <SectionLabel>Featured Projects</SectionLabel>
           <div className="space-y-7">
-            {cvProjects.map((project) => (
-              <div key={project.title} className="border-l border-white/10 pl-5">
-                <h3 className="text-sm font-medium text-foreground">{project.title}</h3>
-                <p className="text-xs font-mono text-foreground/35 mt-0.5 mb-2">{project.stack}</p>
-                <ul className="space-y-1.5">
-                  {project.points.map((point, i) => (
-                    <li key={i} className="text-sm text-foreground/55 leading-relaxed flex gap-2">
-                      <span className="text-foreground/20 shrink-0 mt-0.5">—</span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
+            {projects.filter((p) => p.highlight).map((project) => (
+              <div key={project.id} className="border-l border-white/10 pl-5">
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <h3 className="text-sm font-medium text-foreground">{project.title}</h3>
+                  {project.url && (
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-foreground/30 hover:text-foreground/60 transition-colors shrink-0">
+                      live ↗
+                    </a>
+                  )}
+                </div>
+                <p className="text-xs font-mono text-foreground/35 mb-2">{project.tags.join(' · ')}</p>
+                <p className="text-sm text-foreground/55 leading-relaxed">{project.description}</p>
               </div>
             ))}
           </div>
@@ -293,89 +294,6 @@ const aiGovernance = [
   'Failure recovery & retry logic',
 ]
 
-const cvProjects = [
-  {
-    title: 'Multi-Agent Content Pipeline',
-    stack: 'Claude Code · Python · Multi-agent orchestration',
-    points: [
-      'Built a governed multi-agent system with strict role separation and a CLAUDE.md engineering contract.',
-      'Enforced no self-verification, deterministic QC, and structured output guarantees.',
-      'Designed for scalable content production and automated publishing.',
-    ],
-  },
-  {
-    title: 'TTS & Audio Production Pipeline',
-    stack: 'Python · FFmpeg · TTS · QC automation',
-    points: [
-      'Automated full podcast production: loudness normalisation (LUFS), segment QC, and auto-regeneration of failed segments.',
-      'Built a reliable, repeatable pipeline suitable for commercial audio workflows.',
-    ],
-  },
-  {
-    title: 'MCP Integration Stack (Google APIs + Local Server)',
-    stack: 'MCP · Claude Desktop · Google Calendar / Gmail / Drive',
-    points: [
-      'Built a full MCP server stack enabling natural-language automation across email, scheduling, and document workflows.',
-      'Demonstrated real-world agentic automation beyond sandbox examples.',
-    ],
-  },
-  {
-    title: 'YouTube → LLM Insight Extractor',
-    stack: 'Python · Whisper · yt-dlp · Anthropic API',
-    points: [
-      'Automated transcript extraction, speech-to-text, and structured insight generation.',
-      'Produces concepts, action items, and knowledge gaps for research workflows.',
-    ],
-  },
-  {
-    title: 'PDF Documentation Generator',
-    stack: 'Python · ReportLab',
-    points: [
-      'Automated generation of branded PDF documentation with styled code blocks and metadata.',
-      'Used for developer onboarding and technical guides.',
-    ],
-  },
-  {
-    title: 'eBook → Markdown Batch Converter',
-    stack: 'Python · MarkItDown · MCP',
-    points: [
-      'Converted 52 PDFs to clean Markdown with error handling and retry logic.',
-      'Fully automated, hands-off batch processing.',
-    ],
-  },
-  {
-    title: 'Harbour Bridge Monitor',
-    stack: 'Next.js · React · Real-time data',
-    points: [
-      'Built a live infrastructure monitoring dashboard for Auckland Harbour Bridge.',
-      'Includes status indicators, live polling, and production deployment.',
-    ],
-  },
-  {
-    title: 'Tom DeMark Indicator (TD Sequential) Charting App',
-    stack: 'Next.js · TypeScript · Finance',
-    points: [
-      'Implemented full TD Sequential indicator logic and interactive charting.',
-      'Used for technical analysis and signal research.',
-    ],
-  },
-  {
-    title: 'Portfolio AI (PRA)',
-    stack: 'Next.js · AI · Finance',
-    points: [
-      'AI-powered portfolio analysis tool combining market data with LLM reasoning.',
-      'Surfaces actionable insights for retail investors.',
-    ],
-  },
-  {
-    title: 'Natural Language SQL Query App',
-    stack: 'LangChain · CopilotKit · Anthropic API',
-    points: [
-      'Built an NL → SQL interface with a Next.js backend.',
-      'Converts plain English questions into validated SQL queries.',
-    ],
-  },
-]
 
 const highlights = [
   {

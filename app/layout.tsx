@@ -56,7 +56,7 @@ const personSchema = {
   jobTitle: 'Technical Project Manager',
   description: 'Technical Project Manager and AI-driven builder specialising in automation, dashboards, and full‑stack product delivery.',
   url: siteUrl,
-  image: `${siteUrl}/og-image.png`,
+  image: `${siteUrl}/og-image.jpg`,
   sameAs: [
     'https://www.linkedin.com/in/timlok',
     'https://github.com/timlok',

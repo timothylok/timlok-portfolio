@@ -1,19 +1,17 @@
 export default function Footer() {
   return (
     <footer className="border-t border-white/10">
-      <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-foreground/40 font-mono">
-        <div className="flex items-center gap-5">
-          <a href="/contact" data-umami-event="Footer: Contact" className="text-foreground/60 hover:text-foreground transition-colors">
-            Let's build something together →
-          </a>
-          <a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" data-umami-event="Footer: LinkedIn" className="hover:text-foreground/70 transition-colors">
-            LinkedIn
-          </a>
-          <a href="https://github.com/timothylok" target="_blank" rel="noopener noreferrer" data-umami-event="Footer: GitHub" className="hover:text-foreground/70 transition-colors">
-            GitHub
-          </a>
+      <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-start justify-between gap-8 text-xs text-foreground/40 font-mono">
+        <div className="flex flex-wrap gap-x-6 gap-y-3">
+          <a href="/#projects" data-umami-event="Footer: Projects" className="hover:text-foreground/70 transition-colors">Projects</a>
+          <a href="/#about" data-umami-event="Footer: About" className="hover:text-foreground/70 transition-colors">About</a>
+          <a href="/CaseStudies" data-umami-event="Footer: Case Studies" className="hover:text-foreground/70 transition-colors">Case Studies</a>
+          <a href="/cv" data-umami-event="Footer: CV" className="hover:text-foreground/70 transition-colors">CV</a>
+          <a href="/contact" data-umami-event="Footer: Contact" className="hover:text-foreground/70 transition-colors">Contact</a>
+          <a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" data-umami-event="Footer: LinkedIn" className="hover:text-foreground/70 transition-colors">LinkedIn</a>
+          <a href="https://github.com/timothylok" target="_blank" rel="noopener noreferrer" data-umami-event="Footer: GitHub" className="hover:text-foreground/70 transition-colors">GitHub</a>
         </div>
-        <span>Built with Next.js &amp; Claude Code</span>
+        <span className="shrink-0">Built with Next.js &amp; Claude Code</span>
       </div>
     </footer>
   )

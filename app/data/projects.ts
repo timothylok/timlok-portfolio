@@ -12,7 +12,7 @@ export const projects: Project[] = [
     id: 18,
     title: 'FIFA 2026 World Cup Predictor',
     description: 'Full-stack tournament prediction system live at fifa2026nz.vercel.app. The model blends Elo ratings (4-year decay, class-based K-factors, shrinkage calibration), Dixon-Coles Poisson scoring, and 10,000 Monte-Carlo simulations per run — then corrects for longshot bias against live Polymarket odds. A fully automated Python pipeline runs on GitHub Actions: fetches fresh international results daily, conditions on real tournament state (played scores, eliminations, shootout winners), validates the output, and commits updated JSON to trigger a zero-downtime Vercel redeploy — no manual intervention since kickoff. A Brier score ledger tracks forecast accuracy throughout. React frontend (Vite + Tailwind + Recharts) surfaces seven data views: group standings, knockout bracket, championship probability table with bookmaker value analysis, Elo trajectories since 2018, and a daily-updated probability chart. Covered by 66 pytest unit tests and 22 Playwright browser tests run against both local and production.',
-    tags: ['Python', 'React', 'GitHub Actions', 'Vercel', 'Vite', 'Tailwind', 'Monte Carlo', 'Playwright', 'Vercel Analytics'],
+    tags: ['Python', 'React', 'GitHub Actions', 'Vercel', 'Vite', 'Tailwind', 'Recharts', 'Monte Carlo', 'Playwright', 'Vercel Analytics'],
     highlight: true,
     url: 'https://fifa2026nz.vercel.app',
   },
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     id: 16,
     title: 'Notion-DeMark — Automated Quant Signal Engine',
     description: 'Fully automated TD Sequential (DeMark) signal pipeline for a live production system. A serverless cron fetches 300-day OHLCV history daily, computes TD Setup (9), Countdown (13), TDST levels, EMA trend, ATR volatility, and signal strength — then upsert-writes to Notion and fires a Discord alert digest. A live SSG dashboard (Next.js + Vercel deploy hook) auto-rebuilds ~30s after each run. Navigated real production constraints: switched price providers twice after yahoo-finance2 and Alpha Vantage were blocked by Vercel egress IPs, landed on Tiingo; patched a path-to-regexp ReDoS vulnerability via npm overrides; designed Notion as the primary DB with a custom title-key upsert scheme — zero-cost, zero infrastructure.',
-    tags: ['TypeScript', 'Next.js', 'Vercel', 'Notion', 'Finance', 'Serverless', 'Automation'],
+    tags: ['TypeScript', 'Next.js', 'Vercel', 'Notion', 'Discord', 'Finance', 'Serverless', 'Automation'],
     highlight: true,
   },
   {
@@ -119,12 +119,10 @@ export const projects: Project[] = [
   },
 ]
 
-export const stack = [
-  'Next.js', 'React', 'TypeScript', 'Tailwind',
-  'Python', 'Node.js', 'FFmpeg', 'LangChain',
-  'Claude Code', 'MCP', 'Anthropic SDK', 'Google Cloud',
-  'Vercel', 'Netlify', 'Groq', 'Recharts', 'Discord',
-  'Framer Motion', 'shadcn/ui', 'Resend',
-  'Vercel Analytics', 'Umami',
-  'GitHub Actions', 'Playwright',
-]
+// Derived automatically — adding a tag to any project registers it here
+export const stack = [...new Set(projects.flatMap(p => p.tags))].sort()
+
+// Maps each stack item to the projects that use it
+export const stackMap = Object.fromEntries(
+  stack.map(tag => [tag, projects.filter(p => p.tags.includes(tag))])
+)

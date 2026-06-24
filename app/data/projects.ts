@@ -17,6 +17,13 @@ export const projects: Project[] = [
     url: 'https://timlok-portfolio.vercel.app',
   },
   {
+    id: 16,
+    title: 'Notion-DeMark — Automated Quant Signal Engine',
+    description: 'Fully automated TD Sequential (DeMark) signal pipeline for a live production system. A serverless cron fetches 300-day OHLCV history daily, computes TD Setup (9), Countdown (13), TDST levels, EMA trend, ATR volatility, and signal strength — then upsert-writes to Notion and fires a Discord alert digest. A live SSG dashboard (Next.js + Vercel deploy hook) auto-rebuilds ~30s after each run. Navigated real production constraints: switched price providers twice after yahoo-finance2 and Alpha Vantage were blocked by Vercel egress IPs, landed on Tiingo; patched a path-to-regexp ReDoS vulnerability via npm overrides; designed Notion as the primary DB with a custom title-key upsert scheme — zero-cost, zero infrastructure.',
+    tags: ['TypeScript', 'Next.js', 'Vercel', 'Notion', 'Finance', 'Serverless', 'Automation'],
+    highlight: true,
+  },
+  {
     id: 1,
     title: 'Multi-Agent Content Pipeline',
     description: 'Planner → Worker → Verifier → QC → Uploader architecture with enforced role separation. No self-verification. No skipped checks. Governed by a CLAUDE.md engineering contract.',

@@ -9,6 +9,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 19,
+    title: 'Tim Lok Portfolio — timlok-portfolio.vercel.app',
+    description: 'This site. Built with Next.js 14 App Router, optimised to 1.08s LCP through three targeted decisions: replaced Google Fonts @import with next/font, kept Framer Motion but optimised only the LCP element, and simplified the h1 for instant layout measurement. Project filters and tech stack are auto-derived from a single projects array — adding a tag to any project registers it everywhere with no manual sync. CV page includes a print stylesheet that flips the dark theme to white with correct specificity, switches to Georgia for clean PDF rendering, and hides nav/footer. Contact form powered by Resend. Dual analytics: Vercel Analytics for page views, Umami for custom event tracking across all nav clicks, filter interactions, project link clicks, and form submissions — all on free tiers.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind', 'Framer Motion', 'shadcn/ui', 'Vercel', 'Vercel Analytics', 'Umami', 'Resend', 'Performance'],
+    highlight: true,
+    url: 'https://timlok-portfolio.vercel.app',
+  },
+  {
     id: 18,
     title: 'FIFA 2026 World Cup Predictor',
     description: 'Full-stack tournament prediction system live at fifa2026nz.vercel.app. The model blends Elo ratings (4-year decay, class-based K-factors, shrinkage calibration), Dixon-Coles Poisson scoring, and 10,000 Monte-Carlo simulations per run — then corrects for longshot bias against live Polymarket odds. A fully automated Python pipeline runs on GitHub Actions: fetches fresh international results daily, conditions on real tournament state (played scores, eliminations, shootout winners), validates the output, and commits updated JSON to trigger a zero-downtime Vercel redeploy — no manual intervention since kickoff. A Brier score ledger tracks forecast accuracy throughout. React frontend (Vite + Tailwind + Recharts) surfaces seven data views: group standings, knockout bracket, championship probability table with bookmaker value analysis, Elo trajectories since 2018, and a daily-updated probability chart. Covered by 66 pytest unit tests and 22 Playwright browser tests run against both local and production.',

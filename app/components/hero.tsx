@@ -26,6 +26,7 @@ export default function Hero() {
         </motion.p>
 
         <h1 className="text-4xl sm:text-5xl font-light tracking-tight text-foreground leading-tight mb-6">
+          <span className="sr-only">Tim Lok – Technical Project Manager & AI Automation Builder. </span>
           Building AI-powered products
           <br />
           <span className="text-foreground/40">— fast.</span>

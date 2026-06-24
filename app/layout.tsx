@@ -52,12 +52,32 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Tim Lok',
-  jobTitle: 'Technical Project Manager & AI Automation Builder',
+  alternateName: 'tt',
+  jobTitle: 'Technical Project Manager',
+  description: 'Technical Project Manager and AI-driven builder specialising in automation, dashboards, and full‑stack product delivery.',
   url: siteUrl,
-  email: 'timlok@gmail.com',
-  address: { '@type': 'PostalAddress', addressLocality: 'Auckland', addressCountry: 'NZ' },
-  sameAs: ['https://github.com/timothylok', 'https://www.linkedin.com/in/timlok'],
-  knowsAbout: ['AI automation', 'Technical project management', 'Next.js', 'Claude Code', 'Multi-agent systems', 'Python', 'TypeScript'],
+  image: `${siteUrl}/og-image.png`,
+  sameAs: [
+    'https://www.linkedin.com/in/timlok',
+    'https://github.com/timlok',
+  ],
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'University of Adelaide', sameAs: 'https://www.adelaide.edu.au/' },
+    { '@type': 'CollegeOrUniversity', name: 'University of Kentucky', sameAs: 'https://www.uky.edu/' },
+  ],
+  knowsAbout: [
+    'AI automation',
+    'Technical project management',
+    'Next.js',
+    'TypeScript',
+    'Vercel',
+    'Notion automation',
+    'Data dashboards',
+    'AI agents',
+    'Product delivery',
+  ],
+  worksFor: { '@type': 'Organization', name: 'Independent / Freelance' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Auckland', addressCountry: 'New Zealand' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

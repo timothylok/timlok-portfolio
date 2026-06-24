@@ -19,13 +19,17 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section className="max-w-5xl mx-auto px-6 pt-24 pb-16">
+    <section className="relative overflow-hidden max-w-5xl mx-auto px-6 pt-24 pb-16">
+      {/* Effect 4: left edge highlight */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-indigo-500/25" />
+      {/* Effect 5: radial spotlight */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(129,140,248,0.08),transparent_70%)]" />
       <div className="max-w-2xl">
         <motion.p {...fadeUp(0)} className="text-xs font-mono uppercase tracking-widest text-foreground/35 mb-6">
           Auckland, New Zealand
         </motion.p>
 
-        <motion.h1 {...fadeUp(0.05)} className="text-5xl sm:text-6xl font-display font-medium tracking-tight leading-[1.05] mb-7">
+        <motion.h1 {...fadeUp(0.05)} className="text-5xl sm:text-6xl font-display font-medium tracking-tight leading-[1.05]">
           <span className="sr-only">Tim Lok – Technical Project Manager & AI Automation Builder. </span>
           <span className="text-foreground">Building AI-powered</span>
           <br />
@@ -34,6 +38,9 @@ export default function Hero() {
             — fast.
           </span>
         </motion.h1>
+
+        {/* Effect 3: gradient thread underline */}
+        <div className="mt-3 mb-7 h-px w-36 bg-gradient-to-r from-indigo-500/50 to-transparent" />
 
         <motion.p {...fadeUp(0.2)} className="text-lg text-foreground/65 leading-relaxed mb-3">
           Ex-Java developer turned Technical Project Manager — now building again, faster than before, with AI as my force multiplier.

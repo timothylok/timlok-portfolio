@@ -52,7 +52,7 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Tim Lok',
-  alternateName: 'tt',
+  alternateName: 'TinHung',
   jobTitle: 'Technical Project Manager',
   description: 'Technical Project Manager and AI-driven builder specialising in automation, dashboards, and full‑stack product delivery.',
   url: siteUrl,

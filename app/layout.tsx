@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: ['/og-image.jpg'],
   },
+  verification: {
+    google: 'NY6OlmtuVw7GylDwz2ny4U3Oy8VEODScLOitr2Wxo3g',
+  },
 }
 
 const personSchema = {

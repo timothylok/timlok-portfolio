@@ -120,7 +120,7 @@ export const projects: Project[] = [
 ]
 
 // Derived automatically — adding a tag to any project registers it here
-export const stack = [...new Set(projects.flatMap(p => p.tags))].sort()
+export const stack = Array.from(new Set(projects.flatMap(p => p.tags))).sort()
 
 // Maps each stack item to the projects that use it
 export const stackMap = Object.fromEntries(

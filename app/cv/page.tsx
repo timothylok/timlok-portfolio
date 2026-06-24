@@ -112,27 +112,7 @@ export default function CVPage() {
           </div>
         </section>
 
-        {/* Engineering Highlights */}
-        <section>
-          <SectionLabel>Selected Engineering Highlights</SectionLabel>
-          <div className="space-y-7">
-            {highlights.map((h) => (
-              <div key={h.title} className="border-l border-white/10 pl-5">
-                <h3 className="text-sm font-medium text-foreground mb-2">{h.title}</h3>
-                <ul className="space-y-1.5">
-                  {h.points.map((point, i) => (
-                    <li key={i} className="text-sm text-foreground/55 leading-relaxed flex gap-2">
-                      <span className="text-foreground/20 shrink-0 mt-0.5">—</span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Tech Stack */}
+{/* Tech Stack */}
         <section>
           <SectionLabel>Tech Stack</SectionLabel>
           <div className="space-y-3">
@@ -294,25 +274,6 @@ const aiGovernance = [
   'Failure recovery & retry logic',
 ]
 
-
-const highlights = [
-  {
-    title: 'CLAUDE.md — Engineering Contract for AI Agents',
-    points: [
-      'Defined strict behavioural rules, pipeline definitions, QC gates, and safety constraints.',
-      'Demonstrates deep understanding of agent governance and deterministic AI behaviour.',
-    ],
-  },
-  {
-    title: 'Portfolio Website — 1.08s LCP',
-    points: [
-      'Achieved 1.08s LCP through three high-leverage decisions.',
-      'Replaced Google Fonts @import with next/font to eliminate the render-blocking request.',
-      'Kept Framer Motion, optimised only the LCP element rather than removing it.',
-      'Simplified h1 for instant layout measurement.',
-    ],
-  },
-]
 
 const techStack = [
   { category: 'AI & Agents', items: 'Claude Code, Anthropic SDK, MCP, LangChain, CopilotKit' },

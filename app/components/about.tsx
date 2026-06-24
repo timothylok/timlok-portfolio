@@ -17,16 +17,22 @@ export default function About() {
           <h2 className="text-xl font-medium text-foreground mb-6">About</h2>
           <div className="space-y-4 text-foreground/60 leading-relaxed">
             <p>
-              I started as a Java developer, moved into technical project management, and spent years sitting in the gap between what customers said they needed and what engineers actually built.
+              I'm Tim Lok, a Technical Project Manager and AI‑accelerated builder based in Auckland. I specialise in designing and delivering systems that combine automation, data, and modern AI tooling to solve real business problems. My background spans software engineering, product delivery, and AI‑driven workflow design — giving me a unique ability to bridge strategy, execution, and technical implementation.
             </p>
             <p>
-              Over the last 18 months, AI coding tools gave me back my leverage. I've been building apps — not as a side hobby, but as a serious practice. Multi-agent pipelines, audio production systems, financial dashboards, MCP integrations.
+              Over the past several years, I've built a wide range of tools and systems: multi‑agent content pipelines, stock‑analysis engines, real‑time dashboards, automation frameworks, internal productivity tools, and full‑stack web applications. My work blends practical engineering with a strong delivery mindset — I focus on clarity, speed, and measurable outcomes.
             </p>
             <p>
-              My approach is simple: I use Claude Code as my primary tool, I don't review every line of code, but I test every single feature. The result is production-quality software shipped at a pace that wasn't possible before.
+              I'm comfortable working across the entire stack: Next.js, TypeScript, Python, Vercel, Notion, Google APIs, Claude/Anthropic tooling, and modern AI frameworks. I also design architectures that emphasise reliability, maintainability, and deterministic behaviour — especially in AI‑powered systems where consistency matters.
             </p>
             <p>
-              The CLAUDE.md I wrote to govern my AI pipelines is probably the truest summary of how I think: define roles, enforce separation of concerns, never self-verify, never claim success without validation.
+              Before moving into AI‑accelerated product development, I completed an MBA at the University of Adelaide and a BS in Computer Science from the University of Kentucky. This combination of business and engineering helps me communicate effectively with both technical and non‑technical stakeholders, making delivery smoother and faster.
+            </p>
+            <p>
+              Today, I focus on building tools, automations, and products that help teams move faster and work smarter. Whether it's a dashboard, an AI agent workflow, a data pipeline, or a full product build, I bring structure, clarity, and momentum to every project.
+            </p>
+            <p>
+              If you're looking for someone who can turn ideas into working systems — quickly and reliably — I'd love to connect.
             </p>
           </div>
         </div>
@@ -35,9 +41,10 @@ export default function About() {
           <div>
             <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-3">Background</p>
             <ul className="space-y-2 text-sm text-foreground/60">
-              <li>Java Developer (prior career)</li>
+              <li>BS Computer Science, University of Kentucky</li>
+              <li>MBA, University of Adelaide</li>
               <li>Technical Project Manager</li>
-              <li>AI-assisted builder (current)</li>
+              <li>AI-accelerated builder (current)</li>
             </ul>
           </div>
           <div>

@@ -1,9 +1,16 @@
 import type { Metadata } from 'next'
-import { DM_Sans, DM_Mono } from 'next/font/google'
+import { DM_Sans, DM_Mono, Space_Grotesk } from 'next/font/google'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import { SITE_NAME } from '@/app/data/site'
 import './globals.css'
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-display',
+  weight: ['300', '400', '500', '600'],
+})
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -89,7 +96,7 @@ const personSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`dark ${dmSans.variable} ${dmMono.variable}`}>
+    <html lang="en" className={`dark ${spaceGrotesk.variable} ${dmSans.variable} ${dmMono.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />

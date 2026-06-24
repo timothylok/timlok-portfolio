@@ -14,8 +14,8 @@ export default function About() {
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="md:col-span-2">
-          <h2 className="text-xl font-medium text-foreground mb-6">About</h2>
-          <div className="space-y-4 text-foreground/60 leading-relaxed">
+          <h2 className="text-xl font-display font-medium text-foreground mb-6">About</h2>
+          <div className="space-y-4 text-foreground/55 leading-relaxed">
             <p>
               I'm Tim Lok, a Technical Project Manager and AI‑accelerated builder based in Auckland. I specialise in designing and delivering systems that combine automation, data, and modern AI tooling to solve real business problems. My background spans software engineering, product delivery, and AI‑driven workflow design — giving me a unique ability to bridge strategy, execution, and technical implementation.
             </p>
@@ -39,8 +39,8 @@ export default function About() {
 
         <div className="space-y-8">
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-3">Background</p>
-            <ul className="space-y-2 text-sm text-foreground/60">
+            <p className="text-xs font-mono uppercase tracking-widest text-foreground/35 mb-3 pl-3 border-l-2 border-indigo-500/50">Background</p>
+            <ul className="space-y-2 text-sm text-foreground/55">
               <li>BS Computer Science, University of Kentucky</li>
               <li>MBA, University of Adelaide</li>
               <li>Technical Project Manager</li>
@@ -48,28 +48,28 @@ export default function About() {
             </ul>
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-3">Links</p>
+            <p className="text-xs font-mono uppercase tracking-widest text-foreground/35 mb-3 pl-3 border-l-2 border-indigo-500/50">Links</p>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="https://github.com/timothylok" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-foreground transition-colors">
+                <a href="https://github.com/timothylok" target="_blank" rel="noopener noreferrer" className="text-foreground/55 hover:text-indigo-400 transition-colors">
                   github.com/timothylok ↗
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-foreground transition-colors">
+                <a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" className="text-foreground/55 hover:text-indigo-400 transition-colors">
                   linkedin.com/in/timlok ↗
                 </a>
               </li>
               <li>
-                <a href="mailto:timlok@gmail.com" className="text-foreground/60 hover:text-foreground transition-colors">
+                <a href="mailto:timlok@gmail.com" className="text-foreground/55 hover:text-indigo-400 transition-colors">
                   timlok@gmail.com ↗
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-3">Location</p>
-            <p className="text-sm text-foreground/60">Auckland, New Zealand</p>
+            <p className="text-xs font-mono uppercase tracking-widest text-foreground/35 mb-3 pl-3 border-l-2 border-indigo-500/50">Location</p>
+            <p className="text-sm text-foreground/55">Auckland, New Zealand</p>
           </div>
         </div>
       </div>

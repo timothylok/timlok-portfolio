@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 
 const stats = [
-  { value: '15', label: 'projects shipped' },
+  { value: '16', label: 'projects shipped' },
   { value: 'Next.js', label: 'primary stack' },
   { value: 'Claude Code', label: 'AI tooling' },
   { value: '~18 mo', label: 'building with AI tools' },

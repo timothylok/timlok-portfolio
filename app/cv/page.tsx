@@ -96,7 +96,7 @@ export default function CVPage() {
         <section>
           <SectionLabel>Featured Projects</SectionLabel>
           <div className="space-y-7">
-            {projects.filter((p) => p.highlight).map((project) => (
+            {projects.filter((p) => p.highlight).slice(0, 3).map((project) => (
               <div key={project.id} className="border-l border-white/10 pl-5">
                 <div className="flex items-baseline justify-between gap-3 mb-1">
                   <h3 className="text-sm font-medium text-foreground">{project.title}</h3>

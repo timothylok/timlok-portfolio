@@ -9,12 +9,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 15,
-    title: 'This Portfolio — 1.08s LCP',
-    description: 'Built and optimised this site in three decisions, not three sprints. (1) Replace Google Fonts @import with next/font — eliminate the render-blocking request. (2) Reject the proposal to remove Framer Motion — keep animations, fix only the LCP element. (3) Make the h1 a plain element so the browser can measure it immediately. Result: 1.08s LCP. The performance gain is a product of the right calls, made in the right order.',
-    tags: ['Next.js', 'Vercel', 'Performance', 'shadcn/ui', 'Decision-making'],
+    id: 17,
+    title: 'Executive Articulation Training System',
+    description: 'Fully automated, cloud-hosted speaking-drill platform built to develop CTO-advisor communication skills. A daily cron pre-generates leadership scenarios via an LLM fallback chain; the user records a 60–120s browser response; audio is transcribed and scored across an 8-dimension executive rubric (clarity, structure, business alignment, and more). Results persist to Notion; a weekly AI-generated summary fires every Friday. Entire stack runs on free-tier services — Vercel, cron-job.org, Notion API, Groq Whisper — with zero manual intervention.',
+    tags: ['Next.js', 'TypeScript', 'Vercel', 'Notion', 'Groq', 'LLM', 'Automation', 'Serverless'],
     highlight: true,
-    url: 'https://timlok-portfolio.vercel.app',
   },
   {
     id: 16,

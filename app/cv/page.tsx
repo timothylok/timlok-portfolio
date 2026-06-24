@@ -166,16 +166,26 @@ export default function CVPage() {
         {/* Positioning */}
         <section className="bg-card border border-white/10 rounded-xl p-6">
           <SectionLabel>Positioning for AI Automation Contracts</SectionLabel>
-          <p className="text-sm text-foreground/60 mb-3">I combine:</p>
           <ul className="space-y-1.5 mb-4">
-            {['PM-level clarity', 'Engineer-level execution', 'AI agent-level automation expertise', 'A portfolio of real shipped systems'].map((item) => (
+            {[
+            'Multi-agent orchestration',
+            'MCP integrations',
+            'Real-world automation',
+            'Claude Code engineering contracts',
+            'Deterministic QC pipelines',
+            'Production deployments',
+            'Full-stack delivery',
+            'PM-level clarity',
+            'Business context',
+            'Speed of execution',
+          ].map((item) => (
               <li key={item} className="text-sm text-foreground/60 flex gap-2">
                 <span className="text-foreground/20 shrink-0">—</span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-          <p className="text-sm text-foreground/35 italic">Most contractors can do one of these — I do all four.</p>
+          <p className="text-sm text-foreground/35 italic">Most contractors cover one or two of these — I bring all of them.</p>
         </section>
 
       </div>

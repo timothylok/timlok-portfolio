@@ -123,5 +123,5 @@ export const stack = [
   'Next.js', 'React', 'TypeScript', 'Tailwind',
   'Python', 'Node.js', 'FFmpeg', 'LangChain',
   'Claude Code', 'MCP', 'Anthropic SDK', 'Google Cloud',
-  'Vercel', 'Netlify', 'Groq', 'Recharts',
+  'Vercel', 'Netlify', 'Groq', 'Recharts', 'Discord',
 ]

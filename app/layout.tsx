@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { DM_Sans, DM_Mono } from 'next/font/google'
+import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import { SITE_NAME } from '@/app/data/site'
 import './globals.css'
@@ -43,7 +44,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`dark ${dmSans.variable} ${dmMono.variable}`}>
-      <body>{children}<Analytics /></body>
+      <body>
+        {children}
+        <Analytics />
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="6eb255cc-41d6-427a-9724-78a28ee9de96"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   )
 }

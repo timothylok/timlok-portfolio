@@ -51,6 +51,19 @@ export default function CVPage() {
           </div>
         </section>
 
+        {/* AI & ML Foundations */}
+        <section>
+          <SectionLabel>AI &amp; ML Foundations (Practical)</SectionLabel>
+          <ul className="space-y-2">
+            {aiFoundations.map((item) => (
+              <li key={item} className="text-sm text-foreground/55 flex gap-2">
+                <span className="text-foreground/20 shrink-0 mt-0.5">—</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         {/* Recent Projects */}
         <section>
           <SectionLabel>Recent AI + Automation Projects</SectionLabel>
@@ -228,6 +241,15 @@ const capabilities = [
     title: 'Technical PM Delivery',
     description: 'Feature-level review, sequencing decisions, performance optimisation, stakeholder alignment.',
   },
+]
+
+const aiFoundations = [
+  'Prompt engineering & structured output design',
+  'Embeddings & vector search',
+  'Retrieval-augmented generation (RAG)',
+  'Model evaluation & safety constraints',
+  'Fine-tuning workflows (conceptual)',
+  'LLM orchestration & agent governance',
 ]
 
 const cvProjects = [

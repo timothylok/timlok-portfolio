@@ -70,6 +70,16 @@ export default function Projects() {
                       featured
                     </span>
                   )}
+                  {project.caseStudySlug && (
+                    <a
+                      href={`/CaseStudies/${project.caseStudySlug}`}
+                      data-umami-event="Project: Case Study"
+                      data-umami-event-project={project.title}
+                      className="text-xs text-foreground/40 hover:text-foreground/70 transition-colors"
+                    >
+                      case study →
+                    </a>
+                  )}
                   {project.url && (
                     <a
                       href={project.url}
@@ -78,7 +88,7 @@ export default function Projects() {
                       data-umami-event="Project: Live Link"
                       data-umami-event-project={project.title}
                       className="text-xs text-foreground/40 hover:text-foreground/70 transition-colors"
->
+                    >
                       live ↗
                     </a>
                   )}

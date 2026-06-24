@@ -1036,3 +1036,15 @@ export const caseStudies: CaseStudy[] = [
 export function getCaseStudy(slug: string): CaseStudy | undefined {
   return caseStudies.find((cs) => cs.slug === slug)
 }
+
+export function getRelated(slug: string, count = 3): CaseStudy[] {
+  const current = getCaseStudy(slug)
+  if (!current) return []
+  return caseStudies
+    .filter((cs) => cs.slug !== slug)
+    .map((cs) => ({ cs, overlap: cs.tags.filter((t) => current.tags.includes(t)).length }))
+    .filter(({ overlap }) => overlap > 0)
+    .sort((a, b) => b.overlap - a.overlap)
+    .slice(0, count)
+    .map(({ cs }) => cs)
+}

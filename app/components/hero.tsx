@@ -49,6 +49,13 @@ export default function Hero() {
           </Button>
           <Button
             variant="outline"
+            render={<a href="/CaseStudies" data-umami-event="Hero: Case Studies" />}
+            className="rounded-full px-5 py-2.5 h-auto border-white/20 text-foreground/70 hover:bg-white/5 hover:text-foreground"
+          >
+            Case Studies →
+          </Button>
+          <Button
+            variant="outline"
             render={<a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" data-umami-event="Hero: LinkedIn" />}
             className="rounded-full px-5 py-2.5 h-auto border-white/20 text-foreground/70 hover:bg-white/5 hover:text-foreground"
           >

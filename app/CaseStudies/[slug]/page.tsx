@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation'
 import Nav from '@/app/components/nav'
 import Footer from '@/app/components/footer'
-import { caseStudies, getCaseStudy } from '@/app/data/case-studies'
+import { caseStudies, getCaseStudy, getRelated } from '@/app/data/case-studies'
+
+const base = 'https://timlok-portfolio.vercel.app'
 
 export function generateStaticParams() {
   return caseStudies.map((cs) => ({ slug: cs.slug }))
@@ -20,8 +22,21 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
   const cs = getCaseStudy(params.slug)
   if (!cs) notFound()
 
+  const related = getRelated(params.slug)
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: base },
+      { '@type': 'ListItem', position: 2, name: 'Case Studies', item: `${base}/CaseStudies` },
+      { '@type': 'ListItem', position: 3, name: cs!.title, item: `${base}/CaseStudies/${params.slug}` },
+    ],
+  }
+
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
 
       <article className="max-w-3xl mx-auto px-6 pt-16 pb-20">
@@ -76,8 +91,32 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           ))}
         </div>
 
+        {/* Related case studies */}
+        {related.length > 0 && (
+          <div className="mt-16 pt-8 border-t border-white/10">
+            <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-6">Related Case Studies</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+              {related.map((r) => (
+                <a
+                  key={r.slug}
+                  href={`/CaseStudies/${r.slug}`}
+                  className="group bg-card p-5 flex flex-col gap-2 hover:-translate-y-0.5 transition-transform"
+                >
+                  <p className="text-sm font-medium text-foreground group-hover:text-foreground/80 transition-colors leading-snug">
+                    {r.title}
+                  </p>
+                  <p className="text-xs text-foreground/40 leading-relaxed line-clamp-2">{r.summary}</p>
+                  <span className="text-xs font-mono text-foreground/30 group-hover:text-foreground/60 transition-colors mt-auto pt-1">
+                    Read →
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Footer CTA */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+        <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
           <a
             href="/CaseStudies"
             className="text-sm text-foreground/40 hover:text-foreground/70 font-mono transition-colors"

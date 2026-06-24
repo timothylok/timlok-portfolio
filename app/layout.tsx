@@ -48,6 +48,13 @@ export const metadata: Metadata = {
   },
 }
 
+const siteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Tim Lok Portfolio',
+  url: siteUrl,
+}
+
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -84,10 +91,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`dark ${dmSans.variable} ${dmMono.variable}`}>
       <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
         {children}
         <Analytics />
         <Script

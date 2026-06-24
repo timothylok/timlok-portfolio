@@ -4,8 +4,8 @@ export default function Nav() {
       <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
         <span className="text-sm font-medium tracking-tight text-foreground">Timothy Lok</span>
         <div className="flex items-center gap-6 text-sm text-foreground/50">
-          <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
-          <a href="#about" className="hover:text-foreground transition-colors">About</a>
+          <a href="/#projects" className="hover:text-foreground transition-colors">Projects</a>
+          <a href="/#about" className="hover:text-foreground transition-colors">About</a>
           <a href="/cv" className="hover:text-foreground transition-colors">CV</a>
           <a href="/contact" className="hover:text-foreground transition-colors">Contact</a>
           <a

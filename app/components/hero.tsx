@@ -8,7 +8,7 @@ const stats = [
   { value: String(projects.length), label: 'projects shipped' },
   { value: 'Next.js', label: 'primary stack' },
   { value: 'Claude Code', label: 'AI tooling' },
-  { value: '~18 mo', label: 'building with AI tools' },
+  { value: '~18 mo', label: 'building with AI' },
 ]
 
 const fadeUp = (delay = 0) => ({
@@ -19,7 +19,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden max-w-5xl mx-auto px-6 pt-24 pb-16">
+    <section className="relative overflow-hidden max-w-5xl mx-auto px-6 pt-14 sm:pt-24 pb-16">
       {/* Effect 4: left edge highlight */}
       <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-indigo-500/25" />
       {/* Effect 5: radial spotlight */}
@@ -29,7 +29,7 @@ export default function Hero() {
           Auckland, New Zealand
         </motion.p>
 
-        <motion.h1 {...fadeUp(0.05)} className="text-5xl sm:text-6xl font-display font-medium tracking-tight leading-[1.05]">
+        <motion.h1 {...fadeUp(0.05)} className="text-4xl sm:text-6xl font-display font-medium tracking-tight leading-[1.05]">
           <span className="sr-only">Tim Lok – Technical Project Manager & AI Automation Builder. </span>
           <span className="text-foreground">Building AI-powered</span>
           <br />

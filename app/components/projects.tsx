@@ -24,7 +24,7 @@ export default function Projects() {
         <span className="text-xs text-foreground/40 font-mono uppercase tracking-wide">{filtered.length} shown</span>
       </div>
 
-      <div className="flex flex-wrap gap-2 mb-10">
+      <div className="flex gap-2 mb-10 overflow-x-auto pb-1 -mx-6 px-6 flex-nowrap sm:flex-wrap sm:overflow-x-visible sm:pb-0 sm:mx-0 sm:px-0">
         {tags.map((tag) => (
           <button
             key={tag}

@@ -21,6 +21,7 @@ export async function POST(req: Request) {
       .join('\n'),
   })
 
-  if (error) return NextResponse.json({ error }, { status: 500 })
-  return NextResponse.json({ ok: true })
+  const headers = { 'Content-Type': 'application/json; charset=utf-8' }
+  if (error) return NextResponse.json({ error }, { status: 500, headers })
+  return NextResponse.json({ ok: true }, { headers })
 }

@@ -9,7 +9,7 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-display',
-  weight: ['300', '400', '500', '600'],
+  weight: ['400', '500'],
 })
 
 const dmSans = DM_Sans({
@@ -23,6 +23,7 @@ const dmMono = DM_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-mono',
+  preload: false,
   weight: ['400', '500'],
 })
 

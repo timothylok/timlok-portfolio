@@ -34,7 +34,7 @@ export default function Hero() {
           <span className="text-foreground">Building AI-powered</span>
           <br />
           <span className="text-foreground">products </span>
-          <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-indigo-300 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-indigo-300 via-violet-300 to-fuchsia-400 bg-clip-text text-transparent">
             — fast.
           </span>
         </motion.h1>
@@ -53,28 +53,28 @@ export default function Hero() {
         <motion.div {...fadeUp(0.3)} className="flex flex-wrap items-center gap-3">
           <Button
             render={<a href="/contact" data-umami-event="Hero: Work With Me" />}
-            className="rounded-full px-5 py-2.5 h-auto bg-indigo-500 hover:bg-indigo-400 text-white border-0 shadow-none"
+            className="rounded-full px-5 py-2.5 h-auto bg-indigo-500 hover:bg-indigo-400 text-white border-0 transition-shadow duration-200 shadow-[0_0_18px_rgba(99,102,241,0.45)] hover:shadow-[0_0_28px_rgba(99,102,241,0.7)]"
           >
             Work with me →
           </Button>
           <Button
             variant="outline"
             render={<a href="/CaseStudies" data-umami-event="Hero: Case Studies" />}
-            className="rounded-full px-5 py-2.5 h-auto border-white/15 text-foreground/60 hover:bg-white/5 hover:text-foreground hover:border-white/25"
+            className="rounded-full px-5 py-2.5 h-auto border-indigo-400/20 text-foreground/60 shadow-[0_0_10px_rgba(129,140,248,0.12)] transition-all duration-200 hover:bg-white/5 hover:text-foreground hover:border-indigo-400/40 hover:shadow-[0_0_18px_rgba(129,140,248,0.3)]"
           >
             Case Studies →
           </Button>
           <Button
             variant="outline"
             render={<a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" data-umami-event="Hero: LinkedIn" />}
-            className="rounded-full px-5 py-2.5 h-auto border-white/15 text-foreground/60 hover:bg-white/5 hover:text-foreground hover:border-white/25"
+            className="rounded-full px-5 py-2.5 h-auto border-indigo-400/20 text-foreground/60 shadow-[0_0_10px_rgba(129,140,248,0.12)] transition-all duration-200 hover:bg-white/5 hover:text-foreground hover:border-indigo-400/40 hover:shadow-[0_0_18px_rgba(129,140,248,0.3)]"
           >
             LinkedIn
           </Button>
           <Button
             variant="outline"
             render={<a href="https://github.com/timothylok" target="_blank" rel="noopener noreferrer" data-umami-event="Hero: GitHub" />}
-            className="rounded-full px-5 py-2.5 h-auto border-white/15 text-foreground/60 hover:bg-white/5 hover:text-foreground hover:border-white/25"
+            className="rounded-full px-5 py-2.5 h-auto border-indigo-400/20 text-foreground/60 shadow-[0_0_10px_rgba(129,140,248,0.12)] transition-all duration-200 hover:bg-white/5 hover:text-foreground hover:border-indigo-400/40 hover:shadow-[0_0_18px_rgba(129,140,248,0.3)]"
           >
             GitHub
           </Button>

@@ -85,9 +85,9 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
-          <Label>Budget range</Label>
+          <Label htmlFor="budget">Budget range</Label>
           <Select onValueChange={(v: string | null) => setFields(f => ({ ...f, budget: v ?? '' }))}>
-            <SelectTrigger>
+            <SelectTrigger id="budget">
               <SelectValue placeholder="Select budget" />
             </SelectTrigger>
             <SelectContent>
@@ -100,9 +100,9 @@ export default function ContactForm() {
           </Select>
         </div>
         <div className="flex flex-col gap-2">
-          <Label>Timeline</Label>
+          <Label htmlFor="timeline">Timeline</Label>
           <Select onValueChange={(v: string | null) => setFields(f => ({ ...f, timeline: v ?? '' }))}>
-            <SelectTrigger>
+            <SelectTrigger id="timeline">
               <SelectValue placeholder="Select timeline" />
             </SelectTrigger>
             <SelectContent>

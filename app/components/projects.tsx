@@ -32,7 +32,7 @@ export default function Projects() {
             data-umami-event="Filter Click"
             data-umami-event-tag={tag}
             className={cn(
-              'text-xs font-mono px-3 py-1.5 rounded-full border transition-colors',
+              'text-xs font-mono px-3 py-2.5 rounded-full border transition-colors',
               activeTag === tag
                 ? 'bg-indigo-500 text-white border-indigo-500'
                 : 'bg-transparent text-foreground/45 border-border hover:border-foreground/25 hover:text-foreground/75'
@@ -105,7 +105,7 @@ export default function Projects() {
                     onClick={() => setActiveTag(tag)}
                     data-umami-event="Project: Tag Click"
                     data-umami-event-tag={tag}
-                    className="text-xs font-mono text-foreground/35 bg-white/[0.04] border border-border px-2 py-0.5 rounded hover:text-indigo-400 hover:border-indigo-500/30 transition-colors"
+                    className="text-xs font-mono text-foreground/35 bg-white/[0.04] border border-border px-2 py-1 rounded hover:text-indigo-400 hover:border-indigo-500/30 transition-colors"
                   >
                     {tag}
                   </button>

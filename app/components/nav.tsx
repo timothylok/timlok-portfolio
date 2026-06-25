@@ -58,7 +58,7 @@ export default function Nav() {
                 key={label}
                 href={href}
                 data-umami-event={event}
-                className="text-sm text-foreground/55 hover:text-foreground transition-colors"
+                className="text-sm text-foreground/55 hover:text-foreground transition-colors py-2"
                 onClick={() => setOpen(false)}
                 {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >

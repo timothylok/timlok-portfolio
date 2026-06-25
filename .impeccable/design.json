@@ -1,0 +1,141 @@
+﻿{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-25T09:00:00.000Z",
+  "title": "Design System: Tim Lok Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "void":          { "role": "neutral",   "displayName": "Void",           "canonical": "oklch(0.11 0.03 262)",  "tonalRamp": ["oklch(0.05 0.02 262)", "oklch(0.11 0.03 262)", "oklch(0.18 0.022 262)", "oklch(0.24 0.018 262)", "oklch(0.35 0.014 262)", "oklch(0.52 0.014 260)", "oklch(0.75 0.010 260)", "oklch(0.93 0.008 260)"] },
+      "surface":       { "role": "neutral",   "displayName": "Card Surface",   "canonical": "oklch(0.15 0.022 262)", "tonalRamp": ["oklch(0.05 0.02 262)", "oklch(0.11 0.03 262)", "oklch(0.15 0.022 262)", "oklch(0.18 0.020 262)", "oklch(0.24 0.018 262)", "oklch(0.52 0.014 260)", "oklch(0.75 0.010 260)", "oklch(0.93 0.008 260)"] },
+      "surface-raised":{ "role": "neutral",   "displayName": "Elevated Surface","canonical": "oklch(0.18 0.020 262)", "tonalRamp": ["oklch(0.05 0.02 262)", "oklch(0.11 0.03 262)", "oklch(0.18 0.020 262)", "oklch(0.24 0.018 262)", "oklch(0.35 0.014 262)", "oklch(0.52 0.014 260)", "oklch(0.75 0.010 260)", "oklch(0.93 0.008 260)"] },
+      "border-dim":    { "role": "neutral",   "displayName": "Dim Border",     "canonical": "oklch(0.24 0.018 262)", "tonalRamp": ["oklch(0.11 0.03 262)", "oklch(0.15 0.022 262)", "oklch(0.24 0.018 262)", "oklch(0.35 0.014 262)", "oklch(0.52 0.014 260)", "oklch(0.65 0.012 260)", "oklch(0.80 0.008 260)", "oklch(0.93 0.008 260)"] },
+      "indigo":        { "role": "primary",   "displayName": "Signal Indigo",  "canonical": "oklch(0.62 0.19 271)", "tonalRamp": ["oklch(0.15 0.035 271)", "oklch(0.22 0.06 271)", "oklch(0.30 0.10 271)", "oklch(0.40 0.14 271)", "oklch(0.50 0.17 271)", "oklch(0.62 0.19 271)", "oklch(0.72 0.16 271)", "oklch(0.85 0.10 271)"] },
+      "indigo-deep":   { "role": "primary",   "displayName": "Deep Indigo",    "canonical": "oklch(0.45 0.18 271)", "tonalRamp": ["oklch(0.15 0.035 271)", "oklch(0.25 0.08 271)", "oklch(0.35 0.13 271)", "oklch(0.45 0.18 271)", "oklch(0.55 0.18 271)", "oklch(0.62 0.19 271)", "oklch(0.72 0.16 271)", "oklch(0.85 0.10 271)"] },
+      "indigo-dim":    { "role": "primary",   "displayName": "Dim Indigo",     "canonical": "oklch(0.18 0.035 271)", "tonalRamp": ["oklch(0.11 0.015 271)", "oklch(0.15 0.025 271)", "oklch(0.18 0.035 271)", "oklch(0.22 0.06 271)", "oklch(0.30 0.10 271)", "oklch(0.45 0.18 271)", "oklch(0.62 0.19 271)", "oklch(0.85 0.10 271)"] },
+      "amber-readout": { "role": "secondary", "displayName": "Amber Readout",  "canonical": "#e4a95c",              "tonalRamp": ["#5c3d10", "#8a5e20", "#b57e35", "#d4964e", "#e4a95c", "#eebd80", "#f5d3a8", "#fcecd8"] },
+      "ink":           { "role": "neutral",   "displayName": "Ink",            "canonical": "oklch(0.93 0.008 260)", "tonalRamp": ["oklch(0.20 0.012 260)", "oklch(0.35 0.010 260)", "oklch(0.52 0.014 260)", "oklch(0.65 0.010 260)", "oklch(0.75 0.010 260)", "oklch(0.85 0.008 260)", "oklch(0.93 0.008 260)", "oklch(0.98 0.002 260)"] },
+      "ink-secondary": { "role": "neutral",   "displayName": "Muted Text",     "canonical": "oklch(0.52 0.014 260)", "tonalRamp": ["oklch(0.15 0.022 262)", "oklch(0.24 0.018 262)", "oklch(0.35 0.014 262)", "oklch(0.45 0.012 260)", "oklch(0.52 0.014 260)", "oklch(0.65 0.010 260)", "oklch(0.80 0.008 260)", "oklch(0.93 0.008 260)"] }
+    },
+    "typographyMeta": {
+      "display":        { "displayName": "Display",         "purpose": "Hero h1 only. One per page." },
+      "headline":       { "displayName": "Headline",        "purpose": "Section h2 headings. Intentionally small, not a showpiece." },
+      "body":           { "displayName": "Body",            "purpose": "About section prose. 65ch max line length. text-wrap: pretty." },
+      "body-secondary": { "displayName": "Body Secondary",  "purpose": "Card descriptions, supporting text." },
+      "label":          { "displayName": "Label / Mono",    "purpose": "Metadata only: location, counts, stat captions, filter labels." }
+    },
+    "shadows": [
+      { "name": "glow-primary",       "value": "0 0 18px rgba(99,102,241,0.45)",  "purpose": "Primary button at rest." },
+      { "name": "glow-primary-hover", "value": "0 0 28px rgba(99,102,241,0.70)",  "purpose": "Primary button on hover." },
+      { "name": "glow-ghost",         "value": "0 0 10px rgba(129,140,248,0.12)", "purpose": "Ghost button at rest." },
+      { "name": "glow-ghost-hover",   "value": "0 0 18px rgba(129,140,248,0.30)", "purpose": "Ghost button on hover." }
+    ],
+    "motion": [
+      { "name": "fade-up-load",   "value": "opacity 0-1, y 20-0, 0.5s easeOut, delay 0-0.3s", "purpose": "Hero section elements on mount. Staggered by 50ms." },
+      { "name": "card-filter",    "value": "opacity 0-1, scale 0.97-1, 0.2s easeOut",          "purpose": "Project cards entering/exiting AnimatePresence on category filter change." },
+      { "name": "section-reveal", "value": "opacity 0-1, y 24-0, 0.5s easeOut, whileInView",  "purpose": "About section entrance on scroll. viewport: once, margin -80px." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px", "note": "Mobile: 2-col stats, filter wraps" },
+      { "name": "md", "value": "768px", "note": "Project grid 1-2 col, About 1-3 col" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Rounded pill, indigo fill, glow shadow that intensifies on hover.",
+      "html": "<button class=\"ds-btn-primary\">Work with me</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: oklch(0.62 0.19 271); color: oklch(0.98 0 0); border: none; border-radius: 9999px; padding: 0.625rem 1.25rem; font-family: DM Sans, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; line-height: 1.5; cursor: pointer; box-shadow: 0 0 18px rgba(99,102,241,0.45); transition: background 0.2s ease, box-shadow 0.2s ease; } .ds-btn-primary:hover { background: oklch(0.70 0.19 271); box-shadow: 0 0 28px rgba(99,102,241,0.70); } .ds-btn-primary:focus-visible { outline: 2px solid oklch(0.62 0.19 271); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary actions. Transparent with dim indigo border, brightens on hover.",
+      "html": "<button class=\"ds-btn-ghost\">Case Studies</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: oklch(0.52 0.014 260); border: 1px solid oklch(0.62 0.19 271 / 0.20); border-radius: 9999px; padding: 0.625rem 1.25rem; font-family: DM Sans, system-ui, sans-serif; font-size: 0.875rem; font-weight: 400; line-height: 1.5; cursor: pointer; box-shadow: 0 0 10px rgba(129,140,248,0.12); transition: all 0.2s ease; } .ds-btn-ghost:hover { background: rgba(255,255,255,0.05); color: oklch(0.93 0.008 260); border-color: oklch(0.62 0.19 271 / 0.40); box-shadow: 0 0 18px rgba(129,140,248,0.30); } .ds-btn-ghost:focus-visible { outline: 2px solid oklch(0.62 0.19 271); outline-offset: 2px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Flat container for project entries. Hover shifts border color to indigo. No shadow. Card tags are display-only spans, not interactive.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-header\"><h3 class=\"ds-card-title\">Project Name</h3><span class=\"ds-card-link\">live</span></div><p class=\"ds-card-desc\">Short project description goes here.</p><div class=\"ds-card-tags\"><span class=\"ds-tag\">Next.js</span><span class=\"ds-tag\">Claude</span></div></div>",
+      "css": ".ds-card { background: oklch(0.15 0.022 262); border: 1px solid oklch(0.24 0.018 262); border-radius: 0.75rem; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; transition: border-color 0.2s ease; } .ds-card:hover { border-color: oklch(0.62 0.19 271 / 0.30); } .ds-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; } .ds-card-title { font-family: Space Grotesk, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; color: oklch(0.93 0.008 260); line-height: 1.4; margin: 0; } .ds-card-link { font-family: DM Mono, monospace; font-size: 0.75rem; color: oklch(0.52 0.014 260 / 0.5); text-decoration: none; white-space: nowrap; } .ds-card-link:hover { color: oklch(0.62 0.19 271); } .ds-card-desc { font-family: DM Sans, system-ui, sans-serif; font-size: 0.875rem; color: oklch(0.52 0.014 260); line-height: 1.6; margin: 0; flex: 1; } .ds-card-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; padding-top: 0.25rem; } .ds-tag { font-family: DM Mono, monospace; font-size: 0.75rem; color: oklch(0.93 0.008 260 / 0.35); background: rgba(255,255,255,0.04); border: 1px solid oklch(0.24 0.018 262); border-radius: 0.25rem; padding: 0.25rem 0.5rem; }"
+    },
+    {
+      "name": "Featured Card",
+      "kind": "card",
+      "refersTo": "card-featured",
+      "description": "Project card variant for highlight:true entries. Full indigo border, dim indigo background tint. No side stripe.",
+      "html": "<div class=\"ds-card-featured\"><div class=\"ds-card-header\"><h3 class=\"ds-card-title\">Featured Project</h3><span class=\"ds-featured-badge\">featured</span></div><p class=\"ds-card-desc\">Featured project description.</p></div>",
+      "css": ".ds-card-featured { background: oklch(0.18 0.035 271); border: 1px solid oklch(0.62 0.19 271 / 0.30); border-radius: 0.75rem; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; transition: border-color 0.2s ease; } .ds-card-featured:hover { border-color: oklch(0.62 0.19 271 / 0.50); } .ds-featured-badge { font-family: DM Mono, monospace; font-size: 0.75rem; color: oklch(0.72 0.16 271); background: oklch(0.62 0.19 271 / 0.10); border: 1px solid oklch(0.62 0.19 271 / 0.20); border-radius: 9999px; padding: 0.125rem 0.5rem; white-space: nowrap; }"
+    },
+    {
+      "name": "Filter Chip (Active)",
+      "kind": "chip",
+      "refersTo": "chip-active",
+      "description": "Active state of the 4-category project filter. Solid indigo fill. Labels: All / AI LLM / Dashboards Data / Automation / Full-Stack.",
+      "html": "<button class=\"ds-chip-active\">AI LLM</button>",
+      "css": ".ds-chip-active { font-family: DM Mono, monospace; font-size: 0.75rem; font-weight: 400; color: #fff; background: oklch(0.62 0.19 271); border: 1px solid oklch(0.62 0.19 271); border-radius: 9999px; padding: 0.625rem 0.75rem; cursor: pointer; white-space: nowrap; transition: background 0.15s ease, border-color 0.15s ease; } .ds-chip-active:focus-visible { outline: 2px solid oklch(0.62 0.19 271); outline-offset: 2px; }"
+    },
+    {
+      "name": "Filter Chip (Inactive)",
+      "kind": "chip",
+      "refersTo": "chip-inactive",
+      "description": "Inactive state of the 4-category project filter. Ghost with dim border. Category names, not raw tech tags.",
+      "html": "<button class=\"ds-chip-inactive\">Full-Stack</button>",
+      "css": ".ds-chip-inactive { font-family: DM Mono, monospace; font-size: 0.75rem; font-weight: 400; color: oklch(0.93 0.008 260 / 0.45); background: transparent; border: 1px solid oklch(0.24 0.018 262); border-radius: 9999px; padding: 0.625rem 0.75rem; cursor: pointer; white-space: nowrap; transition: border-color 0.15s ease, color 0.15s ease; } .ds-chip-inactive:hover { border-color: oklch(0.52 0.014 260 / 0.40); color: oklch(0.93 0.008 260 / 0.70); } .ds-chip-inactive:focus-visible { outline: 2px solid oklch(0.62 0.19 271); outline-offset: 2px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Sticky top bar with route-aware active states via usePathname. Full-page routes get aria-current=page and full-opacity text. Anchor links excluded from active detection.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link ds-nav-link--active\" href=\"/cv\" aria-current=\"page\">CV</a><a class=\"ds-nav-link\" href=\"/#projects\">Projects</a><a class=\"ds-nav-link\" href=\"/contact\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 1.5rem; padding: 1rem 1.5rem; background: oklch(0.11 0.03 262 / 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid oklch(0.24 0.018 262); position: sticky; top: 0; z-index: 50; } .ds-nav-link { font-family: DM Sans, system-ui, sans-serif; font-size: 0.875rem; font-weight: 400; color: oklch(0.93 0.008 260 / 0.45); text-decoration: none; transition: color 0.2s ease; } .ds-nav-link:hover { color: oklch(0.93 0.008 260); } .ds-nav-link--active { color: oklch(0.93 0.008 260); } .ds-nav-link:focus-visible { outline: 2px solid oklch(0.62 0.19 271); outline-offset: 2px; border-radius: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Signal Room",
+    "overview": "A dark ambient environment where information surfaces with purpose. Think precision instruments in low light — amber readouts, indigo channel locks, near-silence punctuated by the things that matter. The atmospheric gradients are fixed to the viewport like background radiation; they don't move, don't scroll, don't demand attention. They exist to give the darkness depth.\n\nThe indigo is the primary signal frequency. It's committed — it carries the identity across CTAs, active states, and key accents — but it is never decorative. The amber exists for exactly one purpose: numeric stats. Two colors, two jobs, zero crossover.\n\nThe typographic voice is DM Sans for reading, Space Grotesk for impact, DM Mono for metadata. Mono labels are used sparingly for category markers and stat captions — the tell that someone who codes built this.",
+    "keyCharacteristics": [
+      "Dark-native (not dark-mode toggle — dark is the default and the identity)",
+      "Two-accent system: indigo for interaction, amber for data readouts only",
+      "Atmospheric depth via fixed viewport gradient, not component-level decoration",
+      "Monospaced metadata as a craft signal, not a trend",
+      "Framer Motion entrances with prefers-reduced-motion fallbacks",
+      "Medium information density: generous card padding, tight inter-element gaps"
+    ],
+    "rules": [
+      { "name": "The Amber Lock Rule",      "body": "Amber (#e4a95c) is reserved for the Hero stats only. If you are about to use it for a new label, badge, or callout, use indigo or a neutral instead.", "section": "colors" },
+      { "name": "The One Glow Rule",        "body": "Glow shadows appear only on interactive elements at rest or hover. Never on static decorative elements.", "section": "elevation" },
+      { "name": "The Mono Discipline Rule", "body": "DM Mono appears only on metadata (location, tag counts, stat labels, filter chip text). Use DM Sans for all other secondary or subdued text.", "section": "typography" },
+      { "name": "The One H1 Rule",          "body": "One display-size heading per page. Section headings (h2) are intentionally small (1.25rem) to keep the page from shouting.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Cards are flat. They gain no shadow on hover. Their hover state is a border color shift, not elevation.", "section": "elevation" },
+      { "name": "The Token Discipline Rule","body": "All borders and backgrounds use CSS design tokens (border-border, bg-card, bg-muted). Never hardcode border-white/10, bg-white/5, or similar opacity hacks. The print stylesheet remaps these variables; hardcoded opacity values break print output.", "section": "components" }
+    ],
+    "dos": [
+      "Do use indigo (oklch(0.62 0.19 271)) as the primary interactive signal on buttons, active states, hover borders, and focus rings.",
+      "Do use DM Mono exclusively for metadata: location, counts, stat captions, filter labels.",
+      "Do keep the atmospheric gradient on body::before fixed and unscrolled.",
+      "Do use tonal surface steps to create depth: void to surface to surface-raised.",
+      "Do pair every framer-motion animation with prefers-reduced-motion fallbacks.",
+      "Do use text-wrap: balance on display headings and text-wrap: pretty on long prose blocks.",
+      "Do use design tokens (border-border, bg-card, bg-muted) for all borders and backgrounds. Never hardcoded opacity hacks.",
+      "Do reserve amber (#e4a95c) for the Hero stat values and nothing else."
+    ],
+    "donts": [
+      "Don't use gradient text (background-clip: text). Prohibited. The hero uses solid text-indigo-300 for the accent — follow that pattern.",
+      "Don't use border-left or border-right greater than 1px as a colored accent stripe on cards or sidebar labels.",
+      "Don't use glassmorphism unless purposeful and rare.",
+      "Don't replicate the Hero stat block pattern elsewhere.",
+      "Don't use eyebrow labels (text-xs font-mono uppercase tracking-widest) above every section heading. One location callout in the hero; section headers stand alone.",
+      "Don't make this look like a generic dark SaaS portfolio: no gradient hero backgrounds, no floating glass cards, no identical icon+heading+text card grids.",
+      "Don't apply glow shadows to static or decorative elements.",
+      "Don't use amber as a hover or interactive color.",
+      "Don't add onClick handlers to card tags — they are display-only spans. The category filter controls filtering.",
+      "Don't hardcode counts (project totals, stat numbers) that can be derived from data arrays."
+    ]
+  }
+}

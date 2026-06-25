@@ -148,7 +148,7 @@ Two accent frequencies on a near-black void. Every color has exactly one job.
 **Character:** Space Grotesk carries confidence — slightly technical, slightly editorial, nothing generic. DM Sans is the quiet workhorse for reading. DM Mono signals the builder: these are the labels that someone who reads stack traces would write.
 
 ### Hierarchy
-- **Display** (500 weight, `clamp(2.25rem, 6vw, 3.75rem)`, leading 1.05, tracking -0.02em): Hero `h1` only. One per page. Use `text-wrap: balance` to prevent single-word orphans.
+- **Display** (700 weight, `clamp(3rem, 7vw, 4.5rem)`, leading 1.05, tracking -0.025em): Hero `h1` only. One per page. Use `text-wrap: balance` to prevent single-word orphans.
 - **Headline** (500 weight, 1.25rem / 20px, leading 1.3, tracking -0.01em): Section headings (`h2`). Low-key — not a showpiece, a way-finder.
 - **Title** (500 weight, 0.875rem / 14px): Card titles and component headings. Small but weighted.
 - **Body** (400 weight, 1rem / 16px, leading 1.6): About section prose. Cap at 65ch for comfortable reading. Color at `ink-secondary` opacity for secondary content.
@@ -185,10 +185,10 @@ Fully rounded pills. Primary buttons carry an indigo glow that intensifies on ho
 - **Ghost** (`bg-transparent`, `border: 1px solid oklch(0.62 0.19 271 / 0.20)`, `text: ink-secondary`): All secondary actions. On hover: `bg-white/5`, brighter border, brighter text, glow shadow. Transition: 200ms `all`.
 
 ### Filter Chips
-Tag-shaped pills for the project filter bar. The active chip uses the full indigo primary. Inactive chips are ghost with mono text.
+Category pills for the project filter bar. Four macro-categories (`All`, `AI & LLM`, `Dashboards & Data`, `Automation`, `Full-Stack`) — not raw technology tags. Active chip uses solid indigo primary. Inactive chips are ghost with mono text.
 - **Active:** `bg-indigo-500`, white text, `border-indigo-500`, rounded-full
-- **Inactive:** transparent, `text: ink-secondary`, `border: border-dim`, hover lifts border and text brightness
-- **Typography:** DM Mono, 12px, no uppercase (labels only — don't add tracking here)
+- **Inactive:** transparent, `text-foreground/45`, `border: border-dim`, hover lifts border and text brightness
+- **Typography:** DM Mono, 12px, no uppercase (category names are not tags — no letter-spacing)
 - **Layout:** horizontal scroll on mobile (`overflow-x: auto`, `flex-nowrap`), wraps on desktop
 
 ### Cards
@@ -201,16 +201,16 @@ Flat, rounded containers for project entries. No shadow. Hover state is border c
 - **Transition:** border-color 200ms ease
 
 ### Tags (inline)
-Tiny rounded labels inside card footers. Not interactive for sorting — they activate the filter when clicked.
+Tiny rounded labels inside card footers. Display-only metadata — not interactive. Tags show the technology stack; the category filter above the grid controls filtering.
 - **Style:** `bg-white/[0.04]`, `border: border-dim`, rounded (`4px`), `px-2 py-1`
-- **Text:** DM Mono, 12px, `ink-secondary` opacity
-- **Hover:** text shifts to indigo, border brightens to `indigo-500/30`
+- **Text:** DM Mono, 12px, `text-foreground/35`
+- **Interaction:** None. Rendered as `<span>` elements. Do not add `onClick` handlers or hover color shifts.
 
 ### Navigation
-(See `/app/components/nav.tsx` for current implementation)
-- Sticky top bar, max-w-5xl centered
-- Anchor links with active state detection
-- Mobile: collapses to hamburger or stacked menu
+Sticky top bar, `max-w-5xl` centered. Uses `usePathname()` (Next.js) for route-aware active states.
+- **Active detection:** Full-page routes (`/cv`, `/contact`, `/CaseStudies`) get `aria-current="page"` and `text-foreground` (fully opaque). Homepage anchor links (`/#projects`, `/#about`) are excluded — they're sections, not pages.
+- **Default/Hover:** `text-foreground/45` → `text-foreground`, 200ms ease
+- **Mobile:** collapses to hamburger menu (Menu/X icons from lucide-react)
 
 ### Stat Block (Hero)
 The four-stat grid below the hero copy. This is a deliberate pattern — not a template to clone.
@@ -227,11 +227,12 @@ The four-stat grid below the hero copy. This is a deliberate pattern — not a t
 - **Do** keep the atmospheric gradient on `body::before` fixed and unscrolled. It is background radiation, not a hero graphic.
 - **Do** use tonal surface steps to create depth: void → surface → surface-raised. This is the elevation system; shadows are for interaction feedback only.
 - **Do** pair every framer-motion animation with `@media (prefers-reduced-motion: reduce)` — either via Framer's `useReducedMotion` or a CSS fallback.
-- **Do** use `text-wrap: balance` on display headings to prevent orphaned words at any viewport width.
+- **Do** use `text-wrap: balance` on display headings to prevent orphaned words at any viewport width. Use `text-wrap: pretty` on long prose blocks (About section, case study body) to reduce orphans.
+- **Do** use design tokens (`border-border`, `bg-card`, `bg-muted`) for all borders and backgrounds. Never hardcode `border-white/10`, `bg-white/5`, or similar Tailwind opacity hacks — the print stylesheet remaps CSS variables and hardcoded opacity values break.
 - **Do** reserve the amber readout (`#e4a95c`) for the Hero stat values and nothing else.
 
 ### Don't:
-- **Don't** use gradient text (`background-clip: text; -webkit-background-clip: text; color: transparent`). The hero currently has this on "— fast." — it is flagged for removal. Use solid indigo or ink instead. Gradient text is never intentional; it is always decoration.
+- **Don't** use gradient text (`background-clip: text; -webkit-background-clip: text; color: transparent`). Prohibited. The hero accent "— fast." uses solid `text-indigo-300` — that is the pattern. Gradient text is never intentional; it is always decoration.
 - **Don't** use `border-left` or `border-right` greater than 1px as a colored accent stripe on cards, list items, or sidebar labels. The About section's `border-l-2 border-indigo-500/50` on background/links/location labels and the featured card's `border-l-[3px] border-l-indigo-500` are both flagged patterns. Featured cards use a full indigo border, not a stripe. Sidebar labels get no border at all — use spacing or a different visual treatment.
 - **Don't** use glassmorphism (`backdrop-filter: blur(...)` with semi-transparent backgrounds) unless it is purposeful and rare. It is not part of this system.
 - **Don't** replicate the Hero stat block pattern elsewhere. Four amber numbers in a row is a deliberate signature moment — repeating it anywhere else (another section, a case study, a CV page) makes it a template, not a signature.

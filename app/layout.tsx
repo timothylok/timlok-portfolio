@@ -3,13 +3,15 @@ import { DM_Sans, DM_Mono, Space_Grotesk } from 'next/font/google'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import { SITE_NAME } from '@/app/data/site'
+import ConsoleEgg from '@/app/components/console-egg'
+import MotionProvider from '@/app/components/motion-provider'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-display',
-  weight: ['400', '500'],
+  weight: ['400', '500', '700'],
 })
 
 const dmSans = DM_Sans({
@@ -101,7 +103,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-        {children}
+        <MotionProvider>{children}</MotionProvider>
+        <ConsoleEgg />
         <Analytics />
         <Script
           defer

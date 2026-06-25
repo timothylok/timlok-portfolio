@@ -10,8 +10,6 @@ const links = [
   { label: 'Case Studies', href: '/CaseStudies', event: 'Nav: Case Studies' },
   { label: 'CV', href: '/cv', event: 'Nav: CV' },
   { label: 'Contact', href: '/contact', event: 'Nav: Contact' },
-  { label: 'GitHub', href: 'https://github.com/timothylok', event: 'Nav: GitHub', external: true },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/timlok', event: 'Nav: LinkedIn', external: true },
 ]
 
 export default function Nav() {
@@ -26,13 +24,12 @@ export default function Nav() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-6 text-sm text-foreground/45">
-          {links.map(({ label, href, event, external }) => (
+          {links.map(({ label, href, event }) => (
             <a
               key={label}
               href={href}
               data-umami-event={event}
               className="hover:text-foreground transition-colors"
-              {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             >
               {label}
             </a>
@@ -53,14 +50,13 @@ export default function Nav() {
       {open && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
           <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {links.map(({ label, href, event, external }) => (
+            {links.map(({ label, href, event }) => (
               <a
                 key={label}
                 href={href}
                 data-umami-event={event}
                 className="text-sm text-foreground/55 hover:text-foreground transition-colors py-2"
                 onClick={() => setOpen(false)}
-                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
                 {label}
               </a>

@@ -20,7 +20,7 @@ export default function CVPage() {
           <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-indigo-500/25" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(129,140,248,0.08),transparent_70%)]" />
           <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-4">Curriculum Vitae</p>
-          <h1 className="text-4xl font-light text-foreground mb-2">{SITE_NAME}</h1>
+          <h1 className="text-4xl font-display font-light text-foreground mb-2 [text-wrap:balance]">{SITE_NAME}</h1>
           <div className="mt-2 mb-4 h-px w-36 bg-gradient-to-r from-indigo-500/50 to-transparent" />
           <p className="text-foreground/50 mb-5">Auckland, New Zealand · AI Automation Engineer · Technical PM · Multi-Agent Systems Builder</p>
           <div className="flex flex-wrap gap-5 text-sm font-mono text-foreground/40">

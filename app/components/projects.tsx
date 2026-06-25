@@ -13,15 +13,26 @@ export default function Projects() {
     return ['All', ...Array.from(new Set(all)).sort()]
   }, [])
 
-  const filtered = activeTag === 'All'
-    ? projects
-    : projects.filter((p) => p.tags.includes(activeTag))
+  const filtered = useMemo(() => {
+    const base = activeTag === 'All'
+      ? projects
+      : projects.filter((p) => p.tags.includes(activeTag))
+    return [...base].sort((a, b) => (b.highlight ? 1 : 0) - (a.highlight ? 1 : 0))
+  }, [activeTag])
 
   return (
     <section id="projects" className="max-w-5xl mx-auto px-6 py-16">
       <div className="flex items-baseline justify-between mb-8">
         <h2 className="text-xl font-display font-medium text-foreground">Projects</h2>
-        <span className="text-xs text-foreground/40 font-mono uppercase tracking-wide">{filtered.length} shown</span>
+        <motion.span
+          key={filtered.length}
+          initial={{ scale: 0.85, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.15, ease: 'easeOut' }}
+          className="text-xs text-foreground/40 font-mono uppercase tracking-wide"
+        >
+          {filtered.length} shown
+        </motion.span>
       </div>
 
       <div className="flex gap-2 mb-10 overflow-x-auto pb-1 -mx-6 px-6 flex-nowrap sm:flex-wrap sm:overflow-x-visible sm:pb-0 sm:mx-0 sm:px-0">
@@ -43,6 +54,18 @@ export default function Projects() {
         ))}
       </div>
 
+      {filtered.length === 0 && (
+        <div className="py-16 text-center">
+          <p className="text-sm text-foreground/35 font-mono mb-3">No projects match this filter.</p>
+          <button
+            onClick={() => setActiveTag('All')}
+            className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors font-mono"
+          >
+            Clear filter →
+          </button>
+        </div>
+      )}
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <AnimatePresence mode="popLayout">
           {filtered.map((project) => (
@@ -54,9 +77,10 @@ export default function Projects() {
               exit={{ opacity: 0, scale: 0.97 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
               className={cn(
-                'bg-card border border-border rounded-xl p-6 flex flex-col gap-3',
-                'hover:border-indigo-500/30 transition-colors duration-200',
-                project.highlight && 'border-l-[3px] border-l-indigo-500 bg-indigo-950/20'
+                'group bg-card border rounded-xl p-6 flex flex-col gap-3 transition-colors duration-200',
+                project.highlight
+                  ? 'border-indigo-500/30 bg-indigo-950/20 hover:border-indigo-500/50'
+                  : 'border-border hover:border-indigo-500/30'
               )}
             >
               <div className="flex items-start justify-between gap-3">
@@ -74,7 +98,7 @@ export default function Projects() {
                       href={`/CaseStudies/${project.caseStudySlug}`}
                       data-umami-event="Project: Case Study"
                       data-umami-event-project={project.title}
-                      className="text-xs text-foreground/35 hover:text-indigo-400 transition-colors"
+                      className="text-xs text-foreground/35 group-hover:text-foreground/60 hover:!text-indigo-400 transition-colors"
                     >
                       case study →
                     </a>
@@ -86,7 +110,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       data-umami-event="Project: Live Link"
                       data-umami-event-project={project.title}
-                      className="text-xs text-foreground/35 hover:text-indigo-400 transition-colors"
+                      className="text-xs text-foreground/35 group-hover:text-foreground/60 hover:!text-indigo-400 transition-colors"
                     >
                       live ↗
                     </a>

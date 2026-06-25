@@ -18,7 +18,7 @@ export default function ContactPage() {
         <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-5">
           Get in touch
         </p>
-        <h1 className="text-4xl sm:text-5xl font-light tracking-tight text-foreground leading-tight mb-2">
+        <h1 className="text-4xl sm:text-5xl font-display font-light tracking-tight text-foreground leading-tight mb-2 [text-wrap:balance]">
           Let's build your next product.
         </h1>
         <div className="mx-auto mt-2 mb-4 h-px w-36 bg-gradient-to-r from-indigo-500/50 to-transparent" />

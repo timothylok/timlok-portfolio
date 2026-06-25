@@ -2,6 +2,7 @@ import Nav from './components/nav'
 import Hero from './components/hero'
 import Projects from './components/projects'
 import About from './components/about'
+import CTA from './components/cta'
 import Footer from './components/footer'
 import { projectSchemas } from './data/project-schemas'
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <About />
+      <CTA />
       <Footer />
     </main>
   )

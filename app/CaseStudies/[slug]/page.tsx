@@ -54,7 +54,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-indigo-500/25" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(129,140,248,0.08),transparent_70%)]" />
           <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-4">Case Study</p>
-          <h1 className="text-3xl sm:text-4xl font-light tracking-tight text-foreground leading-tight mb-2">
+          <h1 className="text-3xl sm:text-4xl font-display font-light tracking-tight text-foreground leading-tight mb-2 [text-wrap:balance]">
             {cs.title}
           </h1>
           <div className="mt-2 mb-4 h-px w-36 bg-gradient-to-r from-indigo-500/50 to-transparent" />
@@ -72,7 +72,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         <div className="space-y-12">
           {cs.sections.map((section) => (
             <section key={section.heading} className="border-t border-white/10 pt-8">
-              <h2 className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-4">
+              <h2 className="text-base font-display font-medium text-foreground mb-4">
                 {section.heading}
               </h2>
               <div className="space-y-4 text-foreground/70 leading-relaxed">
@@ -97,13 +97,13 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         {/* Related case studies */}
         {related.length > 0 && (
           <div className="mt-16 pt-8 border-t border-white/10">
-            <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-6">Related Case Studies</p>
+            <p className="text-sm font-display font-medium text-foreground mb-6">Related Case Studies</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/5 border border-white/10 rounded-xl overflow-hidden">
               {related.map((r) => (
                 <a
                   key={r.slug}
                   href={`/CaseStudies/${r.slug}`}
-                  className="group bg-card p-5 flex flex-col gap-2 hover:-translate-y-0.5 transition-transform"
+                  className="group bg-card p-5 flex flex-col gap-2 hover:-translate-y-0.5 transition-transform motion-reduce:hover:translate-y-0 motion-reduce:transition-none"
                 >
                   <p className="text-sm font-medium text-foreground group-hover:text-foreground/80 transition-colors leading-snug">
                     {r.title}

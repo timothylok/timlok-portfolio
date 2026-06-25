@@ -29,18 +29,16 @@ export default function Hero() {
           Auckland, New Zealand
         </motion.p>
 
-        <motion.h1 {...fadeUp(0.05)} className="text-4xl sm:text-6xl font-display font-medium tracking-tight leading-[1.05]">
+        <motion.h1 {...fadeUp(0.05)} className="text-5xl sm:text-7xl font-display font-bold tracking-tight leading-[1.05] [text-wrap:balance]">
           <span className="sr-only">Tim Lok – Technical Project Manager & AI Automation Builder. </span>
           <span className="text-foreground">Building AI-powered</span>
           <br />
           <span className="text-foreground">products </span>
-          <span className="bg-gradient-to-r from-indigo-300 via-violet-300 to-fuchsia-400 bg-clip-text text-transparent">
-            — fast.
-          </span>
+          <span className="text-indigo-300">— fast.</span>
         </motion.h1>
 
         {/* Effect 3: gradient thread underline */}
-        <div className="mt-3 mb-7 h-px w-36 bg-gradient-to-r from-indigo-500/50 to-transparent" />
+        <div className="mt-3 mb-7 h-px w-36 bg-gradient-to-r from-indigo-500/70 to-transparent" />
 
         <motion.p {...fadeUp(0.2)} className="text-lg text-foreground/65 leading-relaxed mb-3">
           Ex-Java developer turned Technical Project Manager — now building again, faster than before, with AI as my force multiplier.
@@ -54,7 +52,7 @@ export default function Hero() {
           <Button
             nativeButton={false}
             render={<a href="/contact" data-umami-event="Hero: Work With Me" />}
-            className="rounded-full px-5 py-2.5 h-auto bg-indigo-500 hover:bg-indigo-400 text-white border-0 transition-shadow duration-200 shadow-[0_0_18px_rgba(99,102,241,0.45)] hover:shadow-[0_0_28px_rgba(99,102,241,0.7)]"
+            className="rounded-full px-5 py-2.5 h-auto bg-indigo-500 hover:bg-indigo-400 text-white border-0 transition duration-200 shadow-[0_0_18px_rgba(99,102,241,0.45)] hover:shadow-[0_0_28px_rgba(99,102,241,0.7)]"
           >
             Work with me →
           </Button>
@@ -72,7 +70,7 @@ export default function Hero() {
             render={<a href="https://www.linkedin.com/in/timlok" target="_blank" rel="noopener noreferrer" data-umami-event="Hero: LinkedIn" />}
             className="rounded-full px-5 py-2.5 h-auto border-indigo-400/20 text-foreground/60 shadow-[0_0_10px_rgba(129,140,248,0.12)] transition-all duration-200 hover:bg-white/5 hover:text-foreground hover:border-indigo-400/40 hover:shadow-[0_0_18px_rgba(129,140,248,0.3)]"
           >
-            LinkedIn
+            LinkedIn ↗
           </Button>
           <Button
             nativeButton={false}
@@ -80,7 +78,7 @@ export default function Hero() {
             render={<a href="https://github.com/timothylok" target="_blank" rel="noopener noreferrer" data-umami-event="Hero: GitHub" />}
             className="rounded-full px-5 py-2.5 h-auto border-indigo-400/20 text-foreground/60 shadow-[0_0_10px_rgba(129,140,248,0.12)] transition-all duration-200 hover:bg-white/5 hover:text-foreground hover:border-indigo-400/40 hover:shadow-[0_0_18px_rgba(129,140,248,0.3)]"
           >
-            GitHub
+            GitHub ↗
           </Button>
         </motion.div>
       </div>
@@ -94,7 +92,7 @@ export default function Hero() {
         {stats.map((stat) => (
           <div key={stat.label}>
             <p className="text-2xl font-display font-medium text-[#e4a95c] mb-1">{stat.value}</p>
-            <p className="text-xs font-mono uppercase tracking-wide text-foreground/40">{stat.label}</p>
+            <p className="text-xs font-mono uppercase tracking-widest text-foreground/40">{stat.label}</p>
           </div>
         ))}
       </motion.div>

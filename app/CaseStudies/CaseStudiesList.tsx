@@ -17,7 +17,7 @@ export default function CaseStudiesList() {
     <>
       {/* Count */}
       <div className="flex items-baseline justify-between mb-8">
-        <h1 className="text-xl font-medium text-foreground">Case Studies</h1>
+        <p className="text-sm font-display font-medium text-foreground">All case studies</p>
         <span className="text-sm text-foreground/40 font-mono">
           {start + 1}–{Math.min(start + PAGE_SIZE, caseStudies.length)} of {caseStudies.length}
         </span>
@@ -29,7 +29,7 @@ export default function CaseStudiesList() {
           <a
             key={cs.slug}
             href={`/CaseStudies/${cs.slug}`}
-            className="group bg-card p-6 flex flex-col gap-3 transition-transform hover:-translate-y-0.5"
+            className="group bg-card p-6 flex flex-col gap-3 transition-transform hover:-translate-y-0.5 motion-reduce:hover:translate-y-0 motion-reduce:transition-none"
           >
             <div className="flex items-start justify-between gap-3">
               <h2 className="text-sm font-medium text-foreground leading-snug group-hover:text-foreground/80 transition-colors">

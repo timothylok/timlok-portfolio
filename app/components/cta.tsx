@@ -15,7 +15,7 @@ export default function CTA() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div>
           <p className="text-xl font-display font-medium text-foreground mb-1">
-            If you've seen something that fits —
+            Ready to ship something?
           </p>
           <p className="text-sm text-foreground/45">
             Available for AI automation, dashboards, and full-stack delivery.

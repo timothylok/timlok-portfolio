@@ -24,7 +24,7 @@ export default function CaseStudiesList() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/10 rounded-xl overflow-hidden mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border rounded-xl overflow-hidden mb-8">
         {visible.map((cs) => (
           <a
             key={cs.slug}
@@ -48,7 +48,7 @@ export default function CaseStudiesList() {
               {cs.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs font-mono text-foreground/40 bg-white/5 border border-white/10 px-2 py-0.5 rounded"
+                  className="text-xs font-mono text-foreground/40 bg-white/[0.04] border border-border px-2 py-0.5 rounded"
                 >
                   {tag}
                 </span>
@@ -67,7 +67,7 @@ export default function CaseStudiesList() {
             className={cn(
               'text-xs font-mono px-3 py-1.5 rounded-full border transition-colors',
               page === 1
-                ? 'text-foreground/20 border-white/10 cursor-not-allowed'
+                ? 'text-foreground/20 border-border cursor-not-allowed'
                 : 'text-foreground/50 border-white/15 hover:border-white/30 hover:text-foreground/80'
             )}
           >
@@ -95,7 +95,7 @@ export default function CaseStudiesList() {
             className={cn(
               'text-xs font-mono px-3 py-1.5 rounded-full border transition-colors',
               page === totalPages
-                ? 'text-foreground/20 border-white/10 cursor-not-allowed'
+                ? 'text-foreground/20 border-border cursor-not-allowed'
                 : 'text-foreground/50 border-white/15 hover:border-white/30 hover:text-foreground/80'
             )}
           >

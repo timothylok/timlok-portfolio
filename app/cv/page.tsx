@@ -16,7 +16,7 @@ export default function CVPage() {
       <div className="max-w-4xl mx-auto px-6 pt-16 pb-24 space-y-14">
 
         {/* Header */}
-        <header className="relative overflow-hidden border-b border-white/10 pb-10">
+        <header className="relative overflow-hidden border-b border-border pb-10">
           <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-indigo-500/25" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(129,140,248,0.08),transparent_70%)]" />
           <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-4">Curriculum Vitae</p>
@@ -61,7 +61,7 @@ export default function CVPage() {
           <SectionLabel>Core Capabilities</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {capabilities.map((cap) => (
-              <div key={cap.title} className="bg-card border border-white/10 rounded-lg p-4">
+              <div key={cap.title} className="bg-card border border-border rounded-lg p-4">
                 <p className="text-sm font-medium text-foreground mb-1">{cap.title}</p>
                 <p className="text-sm text-foreground/50 leading-relaxed">{cap.description}</p>
               </div>
@@ -100,7 +100,7 @@ export default function CVPage() {
           <SectionLabel>Featured Projects</SectionLabel>
           <div className="space-y-7">
             {projects.filter((p) => p.highlight).slice(0, 3).map((project) => (
-              <div key={project.id} className="border-l border-white/10 pl-5">
+              <div key={project.id} className="border-l border-border pl-5">
                 <div className="flex items-baseline justify-between gap-3 mb-1">
                   <h3 className="text-sm font-medium text-foreground">{project.title}</h3>
                   {project.url && (
@@ -143,7 +143,7 @@ export default function CVPage() {
         <section>
           <SectionLabel>Work History</SectionLabel>
           <div className="space-y-7">
-            <div className="border-l border-white/10 pl-5">
+            <div className="border-l border-border pl-5">
               <h3 className="text-sm font-medium text-foreground">Technical Project Manager / AI Builder</h3>
               <p className="text-xs font-mono text-foreground/30 mb-2">Auckland, NZ</p>
               <ul className="space-y-1.5">
@@ -159,7 +159,7 @@ export default function CVPage() {
                 ))}
               </ul>
             </div>
-            <div className="border-l border-white/10 pl-5">
+            <div className="border-l border-border pl-5">
               <h3 className="text-sm font-medium text-foreground">Java Developer</h3>
               <p className="text-xs font-mono text-foreground/30 mb-2">Earlier Career</p>
               <p className="text-sm text-foreground/55">Strong foundation in backend engineering, typing discipline, and system design.</p>
@@ -170,7 +170,7 @@ export default function CVPage() {
         {/* Certifications */}
         <section>
           <SectionLabel>Certifications</SectionLabel>
-          <div className="bg-card border border-white/10 rounded-lg p-4 flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+          <div className="bg-card border border-border rounded-lg p-4 flex flex-col sm:flex-row sm:items-start justify-between gap-2">
             <div>
               <p className="text-sm font-medium text-foreground">Microsoft Certified: Azure AI Engineer Associate</p>
               <p className="text-sm text-foreground/50">Microsoft</p>
@@ -198,7 +198,7 @@ export default function CVPage() {
         </section>
 
         {/* Positioning */}
-        <section className="bg-card border border-white/10 rounded-xl p-6">
+        <section className="bg-card border border-border rounded-xl p-6">
           <SectionLabel>Positioning for AI Automation Contracts</SectionLabel>
           <ul className="space-y-1.5 mb-4">
             {[

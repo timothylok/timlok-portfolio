@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { SITE_NAME } from '@/app/data/site'
+import { cn } from '@/lib/utils'
 
 const links = [
   { label: 'Projects', href: '/#projects', event: 'Nav: Projects' },
@@ -14,6 +16,12 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+
+  function isCurrent(href: string) {
+    if (href.startsWith('/#')) return false
+    return pathname.startsWith(href)
+  }
 
   return (
     <nav className="border-b border-border sticky top-0 bg-background/80 backdrop-blur-md z-10">
@@ -23,17 +31,24 @@ export default function Nav() {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-6 text-sm text-foreground/45">
-          {links.map(({ label, href, event }) => (
-            <a
-              key={label}
-              href={href}
-              data-umami-event={event}
-              className="hover:text-foreground transition-colors"
-            >
-              {label}
-            </a>
-          ))}
+        <div className="hidden md:flex items-center gap-6 text-sm">
+          {links.map(({ label, href, event }) => {
+            const current = isCurrent(href)
+            return (
+              <a
+                key={label}
+                href={href}
+                data-umami-event={event}
+                aria-current={current ? 'page' : undefined}
+                className={cn(
+                  'transition-colors',
+                  current ? 'text-foreground' : 'text-foreground/45 hover:text-foreground'
+                )}
+              >
+                {label}
+              </a>
+            )
+          })}
         </div>
 
         {/* Mobile hamburger */}
@@ -50,17 +65,24 @@ export default function Nav() {
       {open && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
           <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {links.map(({ label, href, event }) => (
-              <a
-                key={label}
-                href={href}
-                data-umami-event={event}
-                className="text-sm text-foreground/55 hover:text-foreground transition-colors py-2"
-                onClick={() => setOpen(false)}
-              >
-                {label}
-              </a>
-            ))}
+            {links.map(({ label, href, event }) => {
+              const current = isCurrent(href)
+              return (
+                <a
+                  key={label}
+                  href={href}
+                  data-umami-event={event}
+                  aria-current={current ? 'page' : undefined}
+                  className={cn(
+                    'text-sm py-2 transition-colors',
+                    current ? 'text-foreground' : 'text-foreground/55 hover:text-foreground'
+                  )}
+                  onClick={() => setOpen(false)}
+                >
+                  {label}
+                </a>
+              )
+            })}
           </div>
         </div>
       )}

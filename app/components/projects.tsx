@@ -5,20 +5,18 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { projects } from '@/app/data/projects'
 import { cn } from '@/lib/utils'
 
-export default function Projects() {
-  const [activeTag, setActiveTag] = useState('All')
+const CATEGORIES = ['All', 'AI & LLM', 'Dashboards & Data', 'Automation', 'Full-Stack'] as const
+type Category = typeof CATEGORIES[number]
 
-  const tags = useMemo(() => {
-    const all = projects.flatMap((p) => p.tags)
-    return ['All', ...Array.from(new Set(all)).sort()]
-  }, [])
+export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState<Category>('All')
 
   const filtered = useMemo(() => {
-    const base = activeTag === 'All'
+    const base = activeCategory === 'All'
       ? projects
-      : projects.filter((p) => p.tags.includes(activeTag))
+      : projects.filter((p) => p.category === activeCategory)
     return [...base].sort((a, b) => (b.highlight ? 1 : 0) - (a.highlight ? 1 : 0))
-  }, [activeTag])
+  }, [activeCategory])
 
   return (
     <section id="projects" className="max-w-5xl mx-auto px-6 py-16">
@@ -36,29 +34,29 @@ export default function Projects() {
       </div>
 
       <div className="flex gap-2 mb-10 overflow-x-auto pb-1 -mx-6 px-6 flex-nowrap sm:flex-wrap sm:overflow-x-visible sm:pb-0 sm:mx-0 sm:px-0">
-        {tags.map((tag) => (
+        {CATEGORIES.map((cat) => (
           <button
-            key={tag}
-            onClick={() => setActiveTag(tag)}
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
             data-umami-event="Filter Click"
-            data-umami-event-tag={tag}
+            data-umami-event-tag={cat}
             className={cn(
-              'text-xs font-mono px-3 py-2.5 rounded-full border transition-colors',
-              activeTag === tag
+              'text-xs font-mono px-3 py-2.5 rounded-full border transition-colors whitespace-nowrap',
+              activeCategory === cat
                 ? 'bg-indigo-500 text-white border-indigo-500'
                 : 'bg-transparent text-foreground/45 border-border hover:border-foreground/25 hover:text-foreground/75'
             )}
           >
-            {tag}
+            {cat}
           </button>
         ))}
       </div>
 
       {filtered.length === 0 && (
         <div className="py-16 text-center">
-          <p className="text-sm text-foreground/35 font-mono mb-3">No projects match this filter.</p>
+          <p className="text-sm text-foreground/35 font-mono mb-3">No projects in this category.</p>
           <button
-            onClick={() => setActiveTag('All')}
+            onClick={() => setActiveCategory('All')}
             className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors font-mono"
           >
             Clear filter →
@@ -124,15 +122,12 @@ export default function Projects() {
 
               <div className="flex flex-wrap gap-1.5 pt-1">
                 {project.tags.map((tag) => (
-                  <button
+                  <span
                     key={tag}
-                    onClick={() => setActiveTag(tag)}
-                    data-umami-event="Project: Tag Click"
-                    data-umami-event-tag={tag}
-                    className="text-xs font-mono text-foreground/35 bg-white/[0.04] border border-border px-2 py-1 rounded hover:text-indigo-400 hover:border-indigo-500/30 transition-colors"
+                    className="text-xs font-mono text-foreground/35 bg-white/[0.04] border border-border px-2 py-1 rounded"
                   >
                     {tag}
-                  </button>
+                  </span>
                 ))}
               </div>
             </motion.div>

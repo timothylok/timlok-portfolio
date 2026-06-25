@@ -15,7 +15,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="md:col-span-2">
           <h2 className="text-xl font-display font-medium text-foreground mb-6">About</h2>
-          <div className="space-y-4 text-foreground/55 leading-relaxed max-w-prose">
+          <div className="space-y-4 text-foreground/55 leading-relaxed max-w-prose [text-wrap:pretty]">
             <p>
               I'm Tim Lok, a Technical Project Manager and AI‑accelerated builder based in Auckland. I specialise in designing and delivering systems that combine automation, data, and modern AI tooling to solve real business problems. My background spans software engineering, product delivery, and AI‑driven workflow design — giving me a unique ability to bridge strategy, execution, and technical implementation.
             </p>

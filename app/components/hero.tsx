@@ -28,7 +28,7 @@ export default function Hero() {
           <span className="text-foreground">Building AI-powered</span>
           <br />
           <span className="text-foreground">products </span>
-          <span className="text-clay-500">— fast.<span className="cursor-blink inline-block w-[3px] h-[0.75em] bg-clay-500 ml-1.5 rounded-[1px] align-[0.05em]" aria-hidden="true" /></span>
+          <span className="text-clay-500">— fast.<svg aria-hidden="true" className="cursor-blink inline-block ml-2 text-clay-500 align-[0.05em]" style={{ height: '0.75em', width: 'auto' }} viewBox="0 0 24 24" fill="currentColor"><path d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.818a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .845-.143Z"/></svg></span>
         </motion.h1>
 
         {/* Gradient thread underline */}

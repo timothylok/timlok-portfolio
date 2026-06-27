@@ -71,7 +71,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         {/* Sections */}
         <div className="space-y-12">
           {cs.sections.map((section) => (
-            <section key={section.heading} className="border-t border-white/10 pt-8">
+            <section key={section.heading} className="border-t border-border pt-8">
               <h2 className="text-base font-display font-medium text-foreground mb-4">
                 {section.heading}
               </h2>
@@ -83,7 +83,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                   <ul className="space-y-2 pl-4">
                     {section.bullets.map((b, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <span className="text-foreground/30 mt-1.5 shrink-0">—</span>
+                        <span className="text-muted-foreground mt-1.5 shrink-0">—</span>
                         <span>{b}</span>
                       </li>
                     ))}
@@ -96,9 +96,9 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
         {/* Related case studies */}
         {related.length > 0 && (
-          <div className="mt-16 pt-8 border-t border-white/10">
+          <div className="mt-16 pt-8 border-t border-border">
             <p className="text-sm font-display font-medium text-foreground mb-6">Related Case Studies</p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-border rounded-xl overflow-hidden">
               {related.map((r) => (
                 <a
                   key={r.slug}
@@ -108,8 +108,8 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                   <p className="text-sm font-medium text-foreground group-hover:text-foreground/80 transition-colors leading-snug">
                     {r.title}
                   </p>
-                  <p className="text-xs text-foreground/40 leading-relaxed line-clamp-2">{r.summary}</p>
-                  <span className="text-xs font-mono text-foreground/30 group-hover:text-foreground/60 transition-colors mt-auto pt-1">
+                  <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">{r.summary}</p>
+                  <span className="text-xs font-mono text-muted-foreground/70 group-hover:text-foreground/60 transition-colors mt-auto pt-1">
                     Read →
                   </span>
                 </a>
@@ -119,10 +119,10 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         )}
 
         {/* Footer CTA */}
-        <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+        <div className="mt-10 pt-8 border-t border-border flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
           <a
             href="/CaseStudies"
-            className="text-sm text-foreground/40 hover:text-foreground/70 font-mono transition-colors"
+            className="text-sm text-muted-foreground hover:text-foreground/80 font-mono transition-colors"
           >
             ← All case studies
           </a>

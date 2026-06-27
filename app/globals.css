@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
 }
 
 /* Atmospheric depth — very subtle clay wash at corners, warmth without cream */
@@ -185,6 +185,6 @@ main {
     color: var(--foreground);
   }
   html {
-    font-family: var(--font-sans);
+    font-family: var(--font-display);
   }
 }

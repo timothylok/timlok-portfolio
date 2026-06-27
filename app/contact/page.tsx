@@ -33,11 +33,11 @@ export default function ContactPage() {
       </section>
 
       <section className="max-w-xl mx-auto px-6 pb-20 text-center">
-        <p className="text-sm text-foreground/40 mb-3">
+        <p className="text-sm text-muted-foreground mb-3">
           {projects.length} projects shipped in the last 18 months.<br />
           AI apps, dashboards, automations, and internal tools.
         </p>
-        <p className="text-xs font-mono text-foreground/25">
+        <p className="text-xs font-mono text-muted-foreground/70">
           Prefer email? timlok [at] gmail [dot] com
         </p>
       </section>

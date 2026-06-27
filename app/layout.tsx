@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { DM_Sans, DM_Mono, Space_Grotesk } from 'next/font/google'
+import { Bricolage_Grotesque } from 'next/font/google'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import { SITE_NAME } from '@/app/data/site'
@@ -7,26 +7,11 @@ import ConsoleEgg from '@/app/components/console-egg'
 import MotionProvider from '@/app/components/motion-provider'
 import './globals.css'
 
-const spaceGrotesk = Space_Grotesk({
+const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-display',
-  weight: ['400', '500', '700'],
-})
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-sans',
-  weight: ['300', '400', '500'],
-})
-
-const dmMono = DM_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-mono',
-  preload: false,
-  weight: ['400', '500'],
+  weight: ['300', '400', '500', '600', '700'],
 })
 
 const siteUrl = 'https://timlok-portfolio.vercel.app'
@@ -99,7 +84,7 @@ const personSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable} ${dmMono.variable}`}>
+    <html lang="en" className={bricolageGrotesque.variable}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />

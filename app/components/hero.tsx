@@ -90,7 +90,7 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.45 }}
         className="mt-16 border-t border-border pt-12"
       >
-        <div className="grid grid-cols-3 gap-x-10 gap-y-4 max-w-lg">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-10 gap-y-6 max-w-lg">
           {stats.map((stat) => (
             <div key={stat.label}>
               <p className="text-2xl font-display font-medium text-clay-600 mb-1">{stat.value}</p>

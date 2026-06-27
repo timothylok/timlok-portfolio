@@ -19,7 +19,6 @@ export default function CVPage() {
         <header className="relative overflow-hidden border-b border-border pb-10">
           <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-clay-500/20" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(160,82,45,0.05),transparent_70%)]" />
-          <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-4">Curriculum Vitae</p>
           <h1 className="text-4xl font-display font-light text-foreground mb-2 [text-wrap:balance]">{SITE_NAME}</h1>
           <div className="mt-2 mb-4 h-px w-36 bg-gradient-to-r from-clay-500/50 to-transparent" />
           <p className="text-foreground/65 mb-5">Auckland, New Zealand · AI Automation Engineer · Technical PM · Multi-Agent Systems Builder</p>
@@ -33,7 +32,7 @@ export default function CVPage() {
         {/* Summary */}
         <section>
           <SectionLabel>Summary</SectionLabel>
-          <div className="space-y-3 text-foreground/60 leading-relaxed">
+          <div className="space-y-3 text-foreground/70 leading-relaxed">
             <p>
               AI-accelerated builder specialising in <Strong>agent-based automation</Strong>, <Strong>Claude Code orchestration</Strong>, and <Strong>end-to-end delivery of production systems</Strong>. Former Java developer turned Technical Project Manager — now building again, faster than ever, using AI as a force multiplier.
             </p>
@@ -48,8 +47,8 @@ export default function CVPage() {
           <SectionLabel>Business Impact</SectionLabel>
           <ul className="space-y-2">
             {businessImpact.map((item) => (
-              <li key={item} className="text-sm text-foreground/55 flex gap-2">
-                <span className="text-foreground/20 shrink-0 mt-0.5">—</span>
+              <li key={item} className="text-sm text-foreground/70 flex gap-2">
+                <span className="text-muted-foreground shrink-0 mt-0.5">—</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -63,7 +62,7 @@ export default function CVPage() {
             {capabilities.map((cap) => (
               <div key={cap.title} className="bg-card border border-border rounded-lg p-4">
                 <p className="text-sm font-medium text-foreground mb-1">{cap.title}</p>
-                <p className="text-sm text-foreground/50 leading-relaxed">{cap.description}</p>
+                <p className="text-sm text-foreground/70 leading-relaxed">{cap.description}</p>
               </div>
             ))}
           </div>
@@ -74,8 +73,8 @@ export default function CVPage() {
           <SectionLabel>AI &amp; ML Foundations (Practical)</SectionLabel>
           <ul className="space-y-2">
             {aiFoundations.map((item) => (
-              <li key={item} className="text-sm text-foreground/55 flex gap-2">
-                <span className="text-foreground/20 shrink-0 mt-0.5">—</span>
+              <li key={item} className="text-sm text-foreground/70 flex gap-2">
+                <span className="text-muted-foreground shrink-0 mt-0.5">—</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -87,8 +86,8 @@ export default function CVPage() {
           <SectionLabel>AI Governance &amp; Safety</SectionLabel>
           <ul className="space-y-2">
             {aiGovernance.map((item) => (
-              <li key={item} className="text-sm text-foreground/55 flex gap-2">
-                <span className="text-foreground/20 shrink-0 mt-0.5">—</span>
+              <li key={item} className="text-sm text-foreground/70 flex gap-2">
+                <span className="text-muted-foreground shrink-0 mt-0.5">—</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -104,13 +103,13 @@ export default function CVPage() {
                 <div className="flex items-baseline justify-between gap-3 mb-1">
                   <h3 className="text-sm font-medium text-foreground">{project.title}</h3>
                   {project.url && (
-                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-foreground/30 hover:text-foreground/60 transition-colors shrink-0">
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-muted-foreground hover:text-foreground/70 transition-colors shrink-0">
                       live ↗
                     </a>
                   )}
                 </div>
-                <p className="text-xs font-mono text-foreground/35 mb-2">{project.tags.join(' · ')}</p>
-                <p className="text-sm text-foreground/55 leading-relaxed">{project.description}</p>
+                <p className="text-xs font-mono text-muted-foreground mb-2">{project.tags.join(' · ')}</p>
+                <p className="text-sm text-foreground/70 leading-relaxed">{project.description}</p>
               </div>
             ))}
           </div>
@@ -121,7 +120,7 @@ export default function CVPage() {
           target="_blank"
           rel="noopener noreferrer"
           data-umami-event="CV: Full Portfolio"
-          className="text-xs font-mono text-foreground/40 hover:text-foreground/70 transition-colors"
+          className="text-xs font-mono text-muted-foreground hover:text-foreground/80 transition-colors"
         >
           View full portfolio ↗
         </a>
@@ -132,8 +131,8 @@ export default function CVPage() {
           <div className="space-y-3">
             {techStack.map((row) => (
               <div key={row.category} className="flex gap-4 flex-wrap items-baseline">
-                <span className="text-xs font-mono text-foreground/30 w-28 shrink-0">{row.category}</span>
-                <span className="text-sm text-foreground/60">{row.items}</span>
+                <span className="text-xs font-mono text-muted-foreground w-28 shrink-0">{row.category}</span>
+                <span className="text-sm text-foreground/70">{row.items}</span>
               </div>
             ))}
           </div>
@@ -145,15 +144,15 @@ export default function CVPage() {
           <div className="space-y-7">
             <div className="border-l border-border pl-5">
               <h3 className="text-sm font-medium text-foreground">Technical Project Manager / AI Builder</h3>
-              <p className="text-xs font-mono text-foreground/30 mb-2">Auckland, NZ</p>
+              <p className="text-xs font-mono text-muted-foreground mb-2">Auckland, NZ</p>
               <ul className="space-y-1.5">
                 {[
                   'Delivered AI-powered systems, automation pipelines, and full-stack applications.',
                   'Managed feature delivery, sequencing, and technical decision-making.',
                   'Combined PM discipline with hands-on engineering to ship fast.',
                 ].map((point, i) => (
-                  <li key={i} className="text-sm text-foreground/55 flex gap-2">
-                    <span className="text-foreground/20 shrink-0 mt-0.5">—</span>
+                  <li key={i} className="text-sm text-foreground/70 flex gap-2">
+                    <span className="text-muted-foreground shrink-0 mt-0.5">—</span>
                     <span>{point}</span>
                   </li>
                 ))}
@@ -161,8 +160,8 @@ export default function CVPage() {
             </div>
             <div className="border-l border-border pl-5">
               <h3 className="text-sm font-medium text-foreground">Java Developer</h3>
-              <p className="text-xs font-mono text-foreground/30 mb-2">Earlier Career</p>
-              <p className="text-sm text-foreground/55">Strong foundation in backend engineering, typing discipline, and system design.</p>
+              <p className="text-xs font-mono text-muted-foreground mb-2">Earlier Career</p>
+              <p className="text-sm text-foreground/70">Strong foundation in backend engineering, typing discipline, and system design.</p>
             </div>
           </div>
         </section>
@@ -173,10 +172,10 @@ export default function CVPage() {
           <div className="bg-card border border-border rounded-lg p-4 flex flex-col sm:flex-row sm:items-start justify-between gap-2">
             <div>
               <p className="text-sm font-medium text-foreground">Microsoft Certified: Azure AI Engineer Associate</p>
-              <p className="text-sm text-foreground/50">Microsoft</p>
-              <p className="text-xs font-mono text-foreground/30 mt-1">Credential ID: 85466DAB8F398098</p>
+              <p className="text-sm text-foreground/70">Microsoft</p>
+              <p className="text-xs font-mono text-muted-foreground mt-1">Credential ID: 85466DAB8F398098</p>
             </div>
-            <span className="text-xs font-mono text-foreground/30 shrink-0">Jun 2024 · Expires Jun 2025</span>
+            <span className="text-xs font-mono text-muted-foreground shrink-0">Jun 2024 · Expires Jun 2025</span>
           </div>
         </section>
 
@@ -188,10 +187,10 @@ export default function CVPage() {
               <div key={edu.degree} className="flex flex-col sm:flex-row sm:items-start justify-between gap-1">
                 <div>
                   <h3 className="text-sm font-medium text-foreground">{edu.degree}</h3>
-                  <p className="text-sm text-foreground/50">{edu.institution}</p>
-                  {edu.notes && <p className="text-xs text-foreground/35 mt-1 leading-relaxed">{edu.notes}</p>}
+                  <p className="text-sm text-foreground/70">{edu.institution}</p>
+                  {edu.notes && <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{edu.notes}</p>}
                 </div>
-                <span className="text-xs font-mono text-foreground/30 shrink-0">{edu.years}</span>
+                <span className="text-xs font-mono text-muted-foreground shrink-0">{edu.years}</span>
               </div>
             ))}
           </div>
@@ -213,13 +212,13 @@ export default function CVPage() {
               'Business context',
               'Speed of execution',
             ].map((item) => (
-              <li key={item} className="text-sm text-foreground/60 flex gap-2">
-                <span className="text-foreground/20 shrink-0">—</span>
+              <li key={item} className="text-sm text-foreground/70 flex gap-2">
+                <span className="text-muted-foreground shrink-0">—</span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
-          <p className="text-sm text-foreground/35 italic">Most contractors cover one or two of these — I bring all of them.</p>
+          <p className="text-sm text-muted-foreground italic">Most contractors cover one or two of these — I bring all of them.</p>
         </section>
 
       </div>
@@ -230,7 +229,7 @@ export default function CVPage() {
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
-  return <p className="text-xs font-mono uppercase tracking-widest text-foreground/30 mb-4">{children}</p>
+  return <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-4">{children}</p>
 }
 
 function Strong({ children }: { children: React.ReactNode }) {

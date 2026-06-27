@@ -1,55 +1,45 @@
 ---
 name: Tim Lok Portfolio
-description: Dark-native technical portfolio for a builder who ships AI-powered products fast.
+description: Warm, crafted builder's portfolio with clay/sienna accent on a light supportive ground.
 colors:
-  void: "oklch(0.11 0.03 262)"
-  surface: "oklch(0.15 0.022 262)"
-  surface-raised: "oklch(0.18 0.020 262)"
-  border-dim: "oklch(0.24 0.018 262)"
-  indigo: "oklch(0.62 0.19 271)"
-  indigo-deep: "oklch(0.45 0.18 271)"
-  indigo-dim: "oklch(0.18 0.035 271)"
-  amber-readout: "#e4a95c"
-  ink: "oklch(0.93 0.008 260)"
-  ink-secondary: "oklch(0.52 0.014 260)"
-  atmosphere-top: "oklch(0.40 0.18 271 / 0.35)"
-  atmosphere-bottom: "oklch(0.35 0.15 290 / 0.18)"
+  sienna-clay: "oklch(0.50 0.13 36)"
+  dark-rust: "oklch(0.41 0.13 36)"
+  warm-stone: "oklch(0.97 0.004 50)"
+  bare-white: "oklch(1 0 0)"
+  deep-charcoal: "oklch(0.14 0.015 50)"
+  faded-ink: "oklch(0.42 0.018 50)"
+  pencil-rule: "oklch(0.875 0.012 50)"
+  terracotta-tint: "#FDF1EC"
+  terracotta-light: "#F7DDD1"
 typography:
   display:
-    fontFamily: "Space Grotesk, system-ui, sans-serif"
+    fontFamily: "Bricolage Grotesque, system-ui, sans-serif"
     fontSize: "clamp(3rem, 7vw, 4.5rem)"
     fontWeight: 700
     lineHeight: 1.05
     letterSpacing: "-0.025em"
   headline:
-    fontFamily: "Space Grotesk, system-ui, sans-serif"
+    fontFamily: "Bricolage Grotesque, system-ui, sans-serif"
     fontSize: "1.25rem"
     fontWeight: 500
     lineHeight: 1.3
     letterSpacing: "-0.01em"
+  title:
+    fontFamily: "Bricolage Grotesque, system-ui, sans-serif"
+    fontSize: "0.875rem"
+    fontWeight: 500
+    lineHeight: 1.3
   body:
-    fontFamily: "DM Sans, system-ui, sans-serif"
+    fontFamily: "Bricolage Grotesque, system-ui, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
-    letterSpacing: "normal"
-  body-secondary:
-    fontFamily: "DM Sans, system-ui, sans-serif"
-    fontSize: "0.875rem"
-    fontWeight: 400
-    lineHeight: 1.6
   label:
-    fontFamily: "DM Mono, monospace"
+    fontFamily: "ui-monospace, Cascadia Code, Fira Mono, monospace"
     fontSize: "0.75rem"
     fontWeight: 400
     lineHeight: 1.4
     letterSpacing: "0.08em"
-  print-body:
-    fontFamily: "Georgia, Times New Roman, serif"
-    fontSize: "10.5pt"
-    lineHeight: 1.5
-  print-mono:
-    fontFamily: "Courier New, Courier, monospace"
 rounded:
   full: "9999px"
   xl: "0.75rem"
@@ -61,182 +51,176 @@ spacing:
   gap: "0.75rem"
 components:
   button-primary:
-    backgroundColor: "{colors.indigo}"
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.sienna-clay}"
+    textColor: "{colors.bare-white}"
     rounded: "{rounded.full}"
     padding: "0.625rem 1.25rem"
   button-primary-hover:
-    backgroundColor: "oklch(0.70 0.19 271)"
+    backgroundColor: "{colors.dark-rust}"
   button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.ink-secondary}"
+    textColor: "{colors.faded-ink}"
     rounded: "{rounded.full}"
     padding: "0.625rem 1.25rem"
   card:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.bare-white}"
+    textColor: "{colors.deep-charcoal}"
     rounded: "{rounded.xl}"
     padding: "{spacing.card}"
   card-featured:
-    backgroundColor: "{colors.indigo-dim}"
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.terracotta-tint}"
+    textColor: "{colors.deep-charcoal}"
     rounded: "{rounded.xl}"
-    padding: "{spacing.card}"
+    padding: "1.75rem"
   chip-active:
-    backgroundColor: "{colors.indigo}"
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.sienna-clay}"
+    textColor: "{colors.bare-white}"
     rounded: "{rounded.full}"
-    padding: "0.625rem 0.75rem"
+    padding: "0.5rem 0.75rem"
   chip-inactive:
     backgroundColor: "transparent"
-    textColor: "{colors.ink-secondary}"
+    textColor: "{colors.faded-ink}"
     rounded: "{rounded.full}"
-    padding: "0.625rem 0.75rem"
+    padding: "0.5rem 0.75rem"
 ---
 
 # Design System: Tim Lok Portfolio
 
 ## 1. Overview
 
-**Creative North Star: "The Signal Room"**
+**Creative North Star: "The Builder's Notebook"**
 
-This is a dark ambient environment where information surfaces with purpose. Think precision instruments in low light — amber readouts, indigo channel locks, near-silence punctuated by the things that matter. The atmospheric gradients are fixed to the viewport like background radiation; they don't move, don't scroll, don't demand attention. They exist to give the darkness depth.
+This is a light, warm workspace where evidence surfaces with human warmth. Think a well-used notebook on a workbench — clay and terracotta accents on a clean, off-white ground, the craft of someone who builds things for real. The atmosphere is calm authority, not hype. The background supports the work; the work carries the weight.
 
-The indigo is the primary signal frequency. It's committed — it carries the identity across CTAs, active states, and key accents — but it is never decorative. It appears where interaction lives: buttons that glow on hover, active filter states, the selection highlight on card borders. The amber exists for exactly one purpose: numeric stats. Two colors, two jobs, zero crossover.
+The clay accent is the primary signal frequency. It appears where interaction lives — CTAs, active filter states, featured card borders, stat values — and it is never decorative. A subtle terracotta atmospheric gradient at the viewport corners gives spatial warmth without competing with content. The system is light-native: not a dark-mode toggle, not "light because safe." Light because a hiring manager reading project evidence should feel they are looking at a real person's real work, not a SaaS pitch deck.
 
-The typographic voice is DM Sans for reading, Space Grotesk for impact, DM Mono for metadata. Mono labels are used sparingly for category markers and stat captions — the tell that someone who codes built this. The language throughout is direct, no hedging, no hype: "These are the things I've shipped."
+The typographic voice is Bricolage Grotesque — a humanist-influenced variable grotesque whose name literally means "assemblage, DIY work" in French. It carries warmth and mechanical precision simultaneously. System monospace handles all metadata labels: a craft signal without an extra font load.
 
 **Key Characteristics:**
-- Dark-native (not dark-mode toggle — dark is the default and the identity)
-- Two-accent system: indigo for interaction, amber for data readouts only
-- Atmospheric depth via fixed viewport gradient, not component-level decoration
-- Monospaced metadata as a craft signal, not a trend
-- Framer Motion entrances: fade-up on load, scale+opacity on card filter — always paired with `prefers-reduced-motion` fallbacks
-- Information density is medium: generous padding inside cards, tight gaps between elements
+- Light-native (warm light IS the identity — not a toggle, not a default)
+- Single-accent system: Sienna Clay for interaction, Terracotta Tint for featured surface
+- Atmospheric depth via fixed viewport clay wash at 5–7% opacity — background warmth, not decoration
+- Bricolage Grotesque for display and body; system mono for metadata only
+- Flat-by-default surfaces; hover state is border color shift, never elevation
+- Framer Motion entrances on load and filter — always with `prefers-reduced-motion` fallbacks
 
-## 2. Colors: The Signal Palette
+## 2. Colors: The Workbench Palette
 
-Two accent frequencies on a near-black void. Every color has exactly one job.
+Two surfaces and one accent. The warmth is in the clay, not the background.
 
 ### Primary
-- **Signal Indigo** (`oklch(0.62 0.19 271)`): The brand color. Used on primary CTA buttons, active filter chips, featured card tints, hover states, focus rings, and selection. The glow shadows (`0 0 18px rgba(99,102,241,0.45)`) are the interaction feedback — reserved for buttons and hover targets. Never used decoratively.
-- **Deep Indigo** (`oklch(0.45 0.18 271)`): Pressed/active state of primary. Not used independently.
-- **Dim Indigo** (`oklch(0.18 0.035 271)`): The featured card background tint. Visible only when the card carries `highlight: true`.
+- **Sienna Clay** (`oklch(0.50 0.13 36)` / `#A0522D`): The brand accent. Primary CTAs, active filter chips, hover borders, focus rings, lightning bolt blink in hero. 5.6:1 contrast on white. Never used decoratively on static elements.
+- **Dark Rust** (`oklch(0.41 0.13 36)` / `#8B3D1F`): Hover state of primary button; the exclusive color for stat values in the hero stat block. 7.5:1 contrast on white — maximum legibility for numeric data.
 
 ### Secondary
-- **Amber Readout** (`#e4a95c`): Used on exactly one thing — the stat numbers in the Hero section. Not a link color, not a label color, not a hover color. Its rarity is the point. If it appears anywhere else, it loses its meaning.
+- **Terracotta Tint** (`#FDF1EC`): Featured card background. The lightest clay — warmth without cream. Used exclusively on `highlight: true` project cards.
+- **Terracotta Light** (`#F7DDD1`): Featured badge background, tag borders. A visible step deeper than Terracotta Tint.
 
 ### Neutral
-- **Void** (`oklch(0.11 0.03 262)`): Page background. Slightly blue-tinted, not warm, not cool. The baseline.
-- **Card Surface** (`oklch(0.15 0.022 262)`): Base layer for cards and containers.
-- **Elevated Surface** (`oklch(0.18 0.020 262)`): Muted, popover, and raised panel backgrounds.
-- **Dim Border** (`oklch(0.24 0.018 262)`): Subtle separator between surfaces. Never used to define shape — only to hint at it.
-- **Ink** (`oklch(0.93 0.008 260)`): Primary text. Slightly blue-shifted white — not a harsh `#fff`.
-- **Ink Secondary** (`oklch(0.52 0.014 260)`): Body copy, card descriptions, secondary labels.
+- **Warm Stone** (`oklch(0.97 0.004 50)`): Page background. Near-white with C=0.004 — warm-gray, not cream. The ground stays nearly achromatic; warmth is delivered by the accent.
+- **Bare White** (`oklch(1 0 0)`): Card and modal surface. Pure white cards on Warm Stone create the notebook-page feeling.
+- **Deep Charcoal** (`oklch(0.14 0.015 50)`): Primary text. Slightly warm near-black.
+- **Faded Ink** (`oklch(0.42 0.018 50)`): Muted foreground — secondary text, label color. 5.5:1 on Warm Stone; WCAG AA compliant. Token: `--muted-foreground`.
+- **Pencil Rule** (`oklch(0.875 0.012 50)`): All borders and dividers. Visible but not structural. Token: `--border`.
 
 ### Named Rules
-**The Amber Lock Rule.** Amber (`#e4a95c`) is reserved for the Hero stats only. If you're about to use it for a new label, badge, or callout, use indigo or a neutral instead. The amber earns its warmth by appearing exactly once.
+**The Clay Lock Rule.** Sienna Clay is reserved for interactive surfaces. The one readout exception is the stat block: Dark Rust (clay-600) at full opacity for data values only. If clay appears on a static, non-interactive element, it's drift — use Terracotta Tint instead.
 
-**The One Glow Rule.** Glow shadows (`box-shadow: 0 0 X rgba(99,102,241,Y)`) appear only on interactive elements at rest or hover. Never on static decorative elements.
+**The Background Restraint Rule.** Body background chroma stays ≤ 0.006. Above that it reads as cream — the 2026 AI-default trap. Warmth is delivered by the clay accent and the atmospheric gradient, never by tinting the ground.
 
 ## 3. Typography
 
-**Display Font:** Space Grotesk (weights 400, 500) with system-ui fallback
-**Body Font:** DM Sans (weights 300, 400, 500) with system-ui fallback
-**Label/Mono Font:** DM Mono (weights 400, 500) with monospace fallback
+**Display/Body Font:** Bricolage Grotesque (variable, weights 300–700), system-ui fallback  
+**Label/Mono Font:** `ui-monospace, Cascadia Code, Fira Mono, monospace` — system stack, zero load cost
 
-**Character:** Space Grotesk carries confidence — slightly technical, slightly editorial, nothing generic. DM Sans is the quiet workhorse for reading. DM Mono signals the builder: these are the labels that someone who reads stack traces would write.
+**Character:** Bricolage Grotesque is a variable grotesque with humanist warmth in the letterforms and mechanical precision in the structure. Its name is an intentional match for a builder's portfolio. A single family across display and body creates coherence; the 300–700 weight range provides all hierarchy contrast without a second typeface. System mono handles metadata exclusively — a craft signal in the right register.
 
 ### Hierarchy
-- **Display** (700 weight, `clamp(3rem, 7vw, 4.5rem)`, leading 1.05, tracking -0.025em): Hero `h1` only. One per page. Use `text-wrap: balance` to prevent single-word orphans.
-- **Headline** (500 weight, 1.25rem / 20px, leading 1.3, tracking -0.01em): Section headings (`h2`). Low-key — not a showpiece, a way-finder.
-- **Title** (500 weight, 0.875rem / 14px): Card titles and component headings. Small but weighted.
-- **Body** (400 weight, 1rem / 16px, leading 1.6): About section prose. Cap at 65ch for comfortable reading. Color at `ink-secondary` opacity for secondary content.
-- **Body Secondary** (400 weight, 0.875rem / 14px, leading 1.6): Card descriptions, supporting text. `ink-secondary` color by default.
-- **Label** (DM Mono, 400 weight, 0.75rem / 12px, tracking 0.08em, uppercase): Location callouts, stat captions, filter count. Never used for prose. Never used more than once per visual cluster.
+- **Display** (700 weight, `clamp(3rem, 7vw, 4.5rem)`, leading 1.05, tracking -0.025em): Hero `h1` only. One per page. `text-wrap: balance`.
+- **Headline** (500 weight, 1.25rem / 20px, leading 1.3, tracking -0.01em): Section `h2` headings. Intentionally quiet — the projects are the headline.
+- **Title** (500 weight, 0.875rem / 14px, leading 1.3): Card titles, component headings.
+- **Body** (400 weight, 1rem / 16px, leading 1.6): Prose text. `max-width: 65ch`. `text-wrap: pretty` on long passages.
+- **Body Secondary** (400 weight, 0.875rem / 14px, leading 1.6): Card descriptions, supporting copy. Color: `faded-ink` or `text-foreground/70` minimum.
+- **Label** (system mono, 0.75rem / 12px, tracking 0.08em, uppercase): Location, stat captions, filter text, tech stack categories. Never prose. Never stacked — one label per visual cluster.
 
 ### Named Rules
-**The Mono Discipline Rule.** DM Mono is a craft signal, not a shorthand for "secondary text." It appears only on metadata (location, tag counts, stat labels, filter chip text). Use DM Sans for all other secondary or subdued text.
+**The Mono Discipline Rule.** System mono is a craft signal, not a shorthand for "secondary text." It appears only on metadata. All other subdued text uses Bricolage Grotesque in a lighter weight or lower opacity (minimum `text-foreground/70` for WCAG AA compliance).
 
-**The One H1 Rule.** One display-size heading per page. Section headings (`h2`) are intentionally small (1.25rem) to keep the page from shouting.
+**The One H1 Rule.** One display-size heading per page. Section `h2` headings are small by design (1.25rem) — they orient, not shout.
 
 ## 4. Elevation
 
-This system is flat by default with a tonal depth hierarchy and selective glow. No ambient box-shadows on cards or containers — surfaces are distinguished by background lightness steps (`void → surface → surface-raised`), not shadow.
+Flat by default with tonal lift and selective clay glow. No ambient box-shadows on cards or containers.
 
 Depth is conveyed through three mechanisms:
-1. **Tonal layering**: background steps from `oklch(0.11)` → `oklch(0.15)` → `oklch(0.18)` create implicit hierarchy.
-2. **Atmospheric gradient**: a fixed `body::before` radial gradient (indigo 0.40L at top-left, violet at bottom-right) gives the page spatial depth without any component-level decoration.
-3. **Glow on interaction**: buttons and interactive elements carry `box-shadow` glows that intensify on hover — the glow is feedback, not decoration.
+1. **Tonal surface steps**: Warm Stone ground (L 0.97) → Bare White card (L 1.0) creates a subtle lift without any shadow.
+2. **Atmospheric gradient**: Fixed `body::before` radial gradient — Sienna Clay at 7% opacity in the top-left corner, 5% in the bottom-right — spatial warmth without scrolling or component decoration.
+3. **Clay glow on interaction**: Primary button only. `box-shadow: 0 1px 8px rgba(160,82,45,0.30)` at rest → `0 2px 14px rgba(160,82,45,0.45)` on hover. Interaction feedback only; never static.
 
 ### Shadow Vocabulary
-- **Primary button glow** (`0 0 18px rgba(99,102,241,0.45)` at rest → `0 0 28px rgba(99,102,241,0.7)` on hover): Communicates that this is the primary action. Used only on `button-primary`.
-- **Ghost button glow** (`0 0 10px rgba(129,140,248,0.12)` at rest → `0 0 18px rgba(129,140,248,0.3)` on hover): Subtle interaction feedback on secondary actions.
+- **Primary button glow** (`0 1px 8px rgba(160,82,45,0.30)` rest → `0 2px 14px rgba(160,82,45,0.45)` hover): The only shadow in the system. Confirms the primary action. Used exclusively on `button-primary`.
 
 ### Named Rules
-**The Flat-By-Default Rule.** Cards are flat. They gain no shadow on hover. Their hover state is a border color shift (`border-indigo-500/30`) — not elevation. Elevation belongs to interactive controls, not containers.
+**The Flat-By-Default Rule.** Cards are flat. Hover state is border color shift from Pencil Rule to `oklch(0.50 0.13 36 / 0.30)`. Elevation belongs to interactive controls, not containers. A glowing card that doesn't do anything communicates false affordance.
 
 ## 5. Components
 
 ### Buttons
-Fully rounded pills. Primary buttons carry an indigo glow that intensifies on hover. Secondary buttons are ghost — transparent with a dim indigo border that brightens on interaction.
-- **Shape:** Fully rounded (`border-radius: 9999px`)
-- **Primary** (`bg-indigo-500`, white text, `px-5 py-2.5`): The main CTA. Carries ambient glow at rest, stronger glow on hover. Transition: 200ms `shadow`.
-- **Ghost** (`bg-transparent`, `border: 1px solid oklch(0.62 0.19 271 / 0.20)`, `text: ink-secondary`): All secondary actions. On hover: `bg-white/5`, brighter border, brighter text, glow shadow. Transition: 200ms `all`.
+Fully rounded pills. Primary carries a clay glow. Ghost is clean — hover fills with Terracotta Tint.
+- **Shape:** Fully rounded (`9999px`)
+- **Primary** (`bg-clay-500` / `#A0522D`, white text, `px-5 py-2.5`): Main CTA. Clay glow at rest, deeper on hover. Hover: `bg-clay-600`. Transition: 200ms.
+- **Ghost** (transparent, `border: 1px solid oklch(0.50 0.13 36 / 0.25)`, `text-foreground/65`): Secondary actions. Hover: `bg-clay-50`, `border-clay-500/45`, text forward. No glow.
 
 ### Filter Chips
-Category pills for the project filter bar. Four macro-categories (`All`, `AI & LLM`, `Dashboards & Data`, `Automation`, `Full-Stack`) — not raw technology tags. Active chip uses solid indigo primary. Inactive chips are ghost with mono text.
-- **Active:** `bg-indigo-500`, white text, `border-indigo-500`, rounded-full
-- **Inactive:** transparent, `text-foreground/45`, `border: border-dim`, hover lifts border and text brightness
-- **Typography:** DM Mono, 12px, no uppercase (category names are not tags — no letter-spacing)
-- **Layout:** horizontal scroll on mobile (`overflow-x: auto`, `flex-nowrap`), wraps on desktop
+Category pills above the project grid. Four macro-categories.
+- **Active:** `bg-clay-500`, white text, `border-clay-500`, `rounded-full`
+- **Inactive:** transparent, `text-foreground/55`, `border: pencil-rule`, hover: `border-clay-500/30`, `text-foreground/80`
+- **Typography:** System mono, 0.75rem — no uppercase (category names are not metadata labels)
+- **Mobile:** Horizontal scroll (`overflow-x: auto, flex-nowrap`); wraps on desktop
 
 ### Cards
-Flat, rounded containers for project entries. No shadow. Hover state is border color only.
-- **Corner Style:** Gently rounded (`border-radius: 0.75rem` / 12px)
-- **Background:** Card Surface (`oklch(0.15 0.022 262)`)
-- **Border:** Dim Border (`oklch(0.24 0.018 262)`) at rest → `oklch(0.62 0.19 271 / 0.30)` on hover
-- **Featured variant:** background shifts to Dim Indigo (`oklch(0.18 0.035 271)`) and the full indigo border — no side stripe
-- **Internal Padding:** `1.5rem` (24px) on all sides
-- **Transition:** border-color 200ms ease
+Flat, white containers. Featured variant surfaces on Terracotta Tint.
+- **Corner Style:** Gently rounded (0.75rem / 12px)
+- **Regular:** `bg-card` (white), `border: pencil-rule`, hover: `border-clay-500/30`, p-6
+- **Featured:** `bg-clay-50` (#FDF1EC), `border-clay-500/35`, hover: `border-clay-500/55`, p-7, `md:col-span-2`
+- **Transition:** border-color 200ms ease. No shadow, no elevation.
 
 ### Tags (inline)
-Tiny rounded labels inside card footers. Display-only metadata — not interactive. Tags show the technology stack; the category filter above the grid controls filtering.
-- **Style:** `bg-white/[0.04]`, `border: border-dim`, rounded (`4px`), `px-2 py-1`
-- **Text:** DM Mono, 12px, `text-foreground/35`
-- **Interaction:** None. Rendered as `<span>` elements. Do not add `onClick` handlers or hover color shifts.
+Metadata chips in card footers. Display-only, never interactive.
+- **Style:** `bg-clay-50`, `border: 1px solid clay-100`, rounded (4px), `px-2 py-1`, system mono 0.75rem, `faded-ink`
 
 ### Navigation
-Sticky top bar, `max-w-5xl` centered. Uses `usePathname()` (Next.js) for route-aware active states.
-- **Active detection:** Full-page routes (`/cv`, `/contact`, `/CaseStudies`) get `aria-current="page"` and `text-foreground` (fully opaque). Homepage anchor links (`/#projects`, `/#about`) are excluded — they're sections, not pages.
-- **Default/Hover:** `text-foreground/45` → `text-foreground`, 200ms ease
-- **Mobile:** collapses to hamburger menu (Menu/X icons from lucide-react)
+Sticky top bar. `bg-background/80 backdrop-blur-md`, `border-b border-border`, `max-w-5xl`, `h-14`.
+- **Active route:** `text-foreground`, `aria-current="page"`. Anchor links (`/#section`) excluded from active detection.
+- **Default/Hover:** `text-foreground/45` → `text-foreground`, 200ms
+- **Mobile:** Menu/X hamburger; `bg-background/95 backdrop-blur-md` drawer
 
 ### Stat Block (Hero)
-The four-stat grid below the hero copy. This is a deliberate pattern — not a template to clone.
-- **Value:** Space Grotesk, 500 weight, 1.5rem (24px), Amber Readout color
-- **Label:** DM Mono, 12px, uppercase, tracking-wide, `ink` at /40 opacity
-- **Layout:** 2 columns mobile → 4 columns desktop, separated by a top border
-- **Rule:** This block exists once. The amber readout color appears here only.
+Three-stat credential grid below hero copy. Signature moment — appears once.
+- **Value:** Bricolage Grotesque 500 weight, 1.5rem, `text-clay-600` (Dark Rust, 7.5:1 contrast)
+- **Label:** System mono, 0.75rem, uppercase, tracking-wide, `faded-ink`
+- **Layout:** `grid-cols-2 sm:grid-cols-3` — wraps gracefully on mobile
 
 ## 6. Do's and Don'ts
 
 ### Do:
-- **Do** use indigo (`oklch(0.62 0.19 271)`) as the primary interactive signal — on buttons, active states, hover borders, and focus rings.
-- **Do** use DM Mono exclusively for metadata: location, counts, stat captions, filter labels. Switch to DM Sans for any other secondary or subdued text.
-- **Do** keep the atmospheric gradient on `body::before` fixed and unscrolled. It is background radiation, not a hero graphic.
-- **Do** use tonal surface steps to create depth: void → surface → surface-raised. This is the elevation system; shadows are for interaction feedback only.
-- **Do** pair every framer-motion animation with `@media (prefers-reduced-motion: reduce)` — either via Framer's `useReducedMotion` or a CSS fallback.
-- **Do** use `text-wrap: balance` on display headings to prevent orphaned words at any viewport width. Use `text-wrap: pretty` on long prose blocks (About section, case study body) to reduce orphans.
-- **Do** use design tokens (`border-border`, `bg-card`, `bg-muted`) for all borders and backgrounds. Never hardcode `border-white/10`, `bg-white/5`, or similar Tailwind opacity hacks — the print stylesheet remaps CSS variables and hardcoded opacity values break.
-- **Do** reserve the amber readout (`#e4a95c`) for the Hero stat values and nothing else.
+- **Do** use Sienna Clay (`oklch(0.50 0.13 36)`) as the only interactive signal: primary CTAs, active states, hover borders, focus rings.
+- **Do** use Dark Rust (clay-600, `#8B3D1F`) exclusively for the hero stat values. It is the data-readout color; its rarity is the point.
+- **Do** use system mono exclusively for metadata (location, stat captions, filter labels, tag text, tech stack identifiers). Use Bricolage Grotesque for all other secondary text.
+- **Do** keep the atmospheric `body::before` gradient fixed and unscrolled. It is background radiation, not a hero graphic.
+- **Do** use design tokens (`border-border`, `bg-card`, `text-muted-foreground`) for all borders and backgrounds — never hardcode `border-white/10` or `bg-white/5`, which are invisible on the light theme.
+- **Do** pair every Framer Motion animation with `prefers-reduced-motion` respect.
+- **Do** use `text-wrap: balance` on `h1`–`h3` and `text-wrap: pretty` on long prose blocks.
+- **Do** maintain body text at minimum `text-foreground/70` or `text-muted-foreground` opacity for WCAG AA compliance on the light background.
 
 ### Don't:
-- **Don't** use gradient text (`background-clip: text; -webkit-background-clip: text; color: transparent`). Prohibited. The hero accent "— fast." uses solid `text-indigo-300` — that is the pattern. Gradient text is never intentional; it is always decoration.
-- **Don't** use `border-left` or `border-right` greater than 1px as a colored accent stripe on cards, list items, or sidebar labels. The About section's `border-l-2 border-indigo-500/50` on background/links/location labels and the featured card's `border-l-[3px] border-l-indigo-500` are both flagged patterns. Featured cards use a full indigo border, not a stripe. Sidebar labels get no border at all — use spacing or a different visual treatment.
-- **Don't** use glassmorphism (`backdrop-filter: blur(...)` with semi-transparent backgrounds) unless it is purposeful and rare. It is not part of this system.
-- **Don't** replicate the Hero stat block pattern elsewhere. Four amber numbers in a row is a deliberate signature moment — repeating it anywhere else (another section, a case study, a CV page) makes it a template, not a signature.
-- **Don't** use eyebrow labels (`text-xs font-mono uppercase tracking-widest`) above every section heading. The hero has one location callout; that is the only standalone eyebrow on the page. Section headers stand alone.
-- **Don't** make this look like a generic dark SaaS portfolio: no saturated gradient hero backgrounds, no floating glass cards, no identical icon+heading+text card grids. The anti-reference is every dark developer portfolio that looks like the last one.
-- **Don't** apply glow shadows to static or decorative elements. Glows are interaction feedback (buttons at rest and hover). A glowing card that doesn't do anything communicates false affordance.
-- **Don't** add amber as a hover or interactive color. It exists for data readouts. Using it as a link hover color or badge color destroys the Amber Lock Rule.
+- **Don't** make this look like a dark developer SaaS portfolio: no black backgrounds, no indigo glows, no gradient hero text, no identical icon+heading+text card grids. The anti-reference is every dark portfolio that looks like the last one.
+- **Don't** use `border-white/10`, `bg-white/5`, or any white opacity hack. These are invisible on the light background. Use `border-border` and `bg-muted` tokens.
+- **Don't** add warm tint to the background beyond `oklch(0.97 0.004 50)`. The warm-neutral band (L 0.84–0.97, C > 0.006) reads as cream/sand/paper — the 2026 AI-default trap.
+- **Don't** use gradient text (`background-clip: text`). Solid `text-clay-500` is the pattern.
+- **Don't** use `border-left` or `border-right` > 1px as a colored stripe accent on cards or list items. Full borders, background tints, or nothing.
+- **Don't** add eyebrow labels (`text-xs font-mono uppercase tracking-widest`) above every section heading. One location callout in the hero is the system's only standalone eyebrow. Section headings stand alone.
+- **Don't** use glassmorphism except on the navigation bar (where it is functional backdrop blur).
+- **Don't** replicate the stat block pattern on other sections. Three Dark Rust numbers is a signature moment; repeating it makes it a template.
+- **Don't** use Space Grotesk, DM Sans, or DM Mono. These are retired. The system is Bricolage Grotesque + system mono only.
+- **Don't** display performative energy, buzzwords, or over-designed showpieces. The brand is calm authority — direct sentences, the work as evidence, no shouting.

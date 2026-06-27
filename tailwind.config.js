@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-mono)', 'monospace'],
+        sans: ['var(--font-display)', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'Cascadia Code', 'Fira Mono', 'monospace'],
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],
       },
       colors: {

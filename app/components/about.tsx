@@ -39,7 +39,7 @@ export default function About() {
 
         <div className="space-y-8">
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-foreground/35 mb-3">Background</p>
+            <p className="text-sm font-display font-medium text-foreground/50 mb-3">Background</p>
             <ul className="space-y-2 text-sm text-foreground/55">
               <li>BS Computer Science, University of Kentucky</li>
               <li>MBA, University of Adelaide</li>
@@ -48,7 +48,7 @@ export default function About() {
             </ul>
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-foreground/35 mb-3">Links</p>
+            <p className="text-sm font-display font-medium text-foreground/50 mb-3">Links</p>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="https://github.com/timothylok" target="_blank" rel="noopener noreferrer" className="text-foreground/55 hover:text-indigo-400 transition-colors">
@@ -68,7 +68,7 @@ export default function About() {
             </ul>
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-foreground/35 mb-3">Location</p>
+            <p className="text-sm font-display font-medium text-foreground/50 mb-3">Location</p>
             <p className="text-sm text-foreground/55">Auckland, New Zealand</p>
           </div>
         </div>

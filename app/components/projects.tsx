@@ -75,14 +75,17 @@ export default function Projects() {
               exit={{ opacity: 0, scale: 0.97 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
               className={cn(
-                'group bg-card border rounded-xl p-6 flex flex-col gap-3 transition-colors duration-200',
+                'group bg-card border rounded-xl flex flex-col gap-3 transition-colors duration-200',
                 project.highlight
-                  ? 'border-indigo-500/30 bg-indigo-950/20 hover:border-indigo-500/50'
-                  : 'border-border hover:border-indigo-500/30'
+                  ? 'p-7 border-indigo-500/40 bg-indigo-950/30 hover:border-indigo-500/60 md:col-span-2'
+                  : 'p-6 border-border hover:border-indigo-500/30'
               )}
             >
               <div className="flex items-start justify-between gap-3">
-                <h3 className="text-sm font-display font-medium text-foreground leading-snug">
+                <h3 className={cn(
+                  'font-display font-medium text-foreground leading-snug',
+                  project.highlight ? 'text-base' : 'text-sm'
+                )}>
                   {project.title}
                 </h3>
                 <div className="flex items-center gap-2 shrink-0">
@@ -96,7 +99,12 @@ export default function Projects() {
                       href={`/CaseStudies/${project.caseStudySlug}`}
                       data-umami-event="Project: Case Study"
                       data-umami-event-project={project.title}
-                      className="text-xs text-foreground/35 group-hover:text-foreground/60 hover:!text-indigo-400 transition-colors"
+                      className={cn(
+                        'text-xs transition-colors',
+                        project.highlight
+                          ? 'text-indigo-400/80 hover:text-indigo-300'
+                          : 'text-foreground/35 group-hover:text-foreground/60 hover:!text-indigo-400'
+                      )}
                     >
                       case study →
                     </a>
@@ -108,7 +116,12 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       data-umami-event="Project: Live Link"
                       data-umami-event-project={project.title}
-                      className="text-xs text-foreground/35 group-hover:text-foreground/60 hover:!text-indigo-400 transition-colors"
+                      className={cn(
+                        'text-xs transition-colors',
+                        project.highlight
+                          ? 'text-indigo-400/80 hover:text-indigo-300'
+                          : 'text-foreground/35 group-hover:text-foreground/60 hover:!text-indigo-400'
+                      )}
                     >
                       live ↗
                     </a>
@@ -116,7 +129,10 @@ export default function Projects() {
                 </div>
               </div>
 
-              <p className="text-sm text-foreground/50 leading-relaxed flex-1">
+              <p className={cn(
+                'text-sm leading-relaxed flex-1',
+                project.highlight ? 'text-foreground/60' : 'text-foreground/50'
+              )}>
                 {project.description}
               </p>
 

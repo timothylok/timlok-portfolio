@@ -6,9 +6,7 @@ import { projects } from '@/app/data/projects'
 
 const stats = [
   { value: String(projects.length), label: 'projects shipped' },
-  { value: 'Next.js', label: 'primary stack' },
-  { value: 'Claude Code', label: 'AI tooling' },
-  { value: '~18 mo', label: 'building with AI' },
+  { value: '18 mo', label: 'building with AI' },
 ]
 
 const fadeUp = (delay = 0) => ({
@@ -20,11 +18,7 @@ const fadeUp = (delay = 0) => ({
 export default function Hero() {
   return (
     <section className="relative overflow-hidden max-w-5xl mx-auto px-6 pt-14 sm:pt-24 pb-16">
-      {/* Effect 4: left edge highlight */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-indigo-500/25" />
-      {/* Effect 5: radial spotlight */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(129,140,248,0.08),transparent_70%)]" />
-      <div className="max-w-2xl">
+      <div className="max-w-3xl">
         <motion.p {...fadeUp(0)} className="text-xs font-mono uppercase tracking-widest text-foreground/35 mb-6">
           Auckland, New Zealand
         </motion.p>
@@ -34,10 +28,10 @@ export default function Hero() {
           <span className="text-foreground">Building AI-powered</span>
           <br />
           <span className="text-foreground">products </span>
-          <span className="text-indigo-300">— fast.</span>
+          <span className="text-indigo-300">— fast.<span className="cursor-blink inline-block w-[3px] h-[0.75em] bg-indigo-400 ml-1.5 rounded-[1px] align-[0.05em]" aria-hidden="true" /></span>
         </motion.h1>
 
-        {/* Effect 3: gradient thread underline */}
+        {/* Gradient thread underline */}
         <div className="mt-3 mb-7 h-px w-36 bg-gradient-to-r from-indigo-500/70 to-transparent" />
 
         <motion.p {...fadeUp(0.2)} className="text-lg text-foreground/65 leading-relaxed mb-3">
@@ -87,14 +81,17 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.45 }}
-        className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-border pt-12"
+        className="mt-16 border-t border-border pt-12"
       >
-        {stats.map((stat) => (
-          <div key={stat.label}>
-            <p className="text-2xl font-display font-medium text-[#e4a95c] mb-1">{stat.value}</p>
-            <p className="text-xs font-mono uppercase tracking-widest text-foreground/40">{stat.label}</p>
-          </div>
-        ))}
+        <div className="grid grid-cols-2 gap-8 max-w-xs">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <p className="text-2xl font-display font-medium text-[#e4a95c] mb-1">{stat.value}</p>
+              <p className="text-xs font-mono uppercase tracking-widest text-foreground/40">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-xs font-mono text-foreground/30 tracking-wide">Next.js · Claude Code · Python · TypeScript</p>
       </motion.div>
     </section>
   )

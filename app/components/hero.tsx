@@ -13,7 +13,7 @@ const monthsAI = Math.floor((Date.now() - AI_BUILDING_START_DATE.getTime()) / (1
 const stats = [
   { value: String(projects.length), label: 'projects shipped' },
   { value: `${monthsAI} mo`, label: 'building with AI' },
-  { value: `${yearsExperience} yr`, label: 'Software development & Project Management' },
+  { value: `${yearsExperience} yr`, label: 'software & PM' },
 ]
 
 const fadeUp = (delay = 0) => ({
@@ -30,11 +30,9 @@ export default function Hero() {
           Auckland, New Zealand
         </motion.p>
 
-        <motion.h1 {...fadeUp(0.05)} className="text-5xl sm:text-7xl font-display font-bold tracking-tight leading-[1.05] [text-wrap:balance]">
+        <motion.h1 {...fadeUp(0.05)} className="text-[clamp(1.875rem,7.5vw,4.5rem)] font-display font-bold tracking-tight leading-[1.05] [text-wrap:balance]">
           <span className="sr-only">Tim Lok – Technical Project Manager & AI Automation Builder. </span>
-          <span className="text-foreground">Building AI-powered</span>
-          <br />
-          <span className="text-foreground">products </span>
+          <span className="text-foreground">Building AI-powered products </span>
           <span className="text-clay-500">— fast.<svg aria-hidden="true" className="cursor-blink inline-block ml-2 text-clay-500 align-[0.05em]" style={{ height: '0.75em', width: 'auto' }} viewBox="0 0 24 24" fill="currentColor"><path d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.818a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .845-.143Z"/></svg></span>
         </motion.h1>
 

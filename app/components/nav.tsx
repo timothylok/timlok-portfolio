@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { SITE_NAME } from '@/app/data/site'
 import { cn } from '@/lib/utils'
@@ -53,7 +54,7 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-foreground/60 hover:text-foreground transition-colors p-1 -mr-1"
+          className="md:hidden text-foreground/60 hover:text-foreground transition-colors p-2 -mr-2"
           onClick={() => setOpen(o => !o)}
           aria-label={open ? 'Close menu' : 'Open menu'}
         >
@@ -62,30 +63,38 @@ export default function Nav() {
       </div>
 
       {/* Mobile drawer */}
-      {open && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
-          <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {links.map(({ label, href, event }) => {
-              const current = isCurrent(href)
-              return (
-                <a
-                  key={label}
-                  href={href}
-                  data-umami-event={event}
-                  aria-current={current ? 'page' : undefined}
-                  className={cn(
-                    'text-sm py-2 transition-colors',
-                    current ? 'text-foreground' : 'text-foreground/55 hover:text-foreground'
-                  )}
-                  onClick={() => setOpen(false)}
-                >
-                  {label}
-                </a>
-              )
-            })}
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            className="md:hidden border-t border-border bg-background/95 backdrop-blur-md"
+          >
+            <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4">
+              {links.map(({ label, href, event }) => {
+                const current = isCurrent(href)
+                return (
+                  <a
+                    key={label}
+                    href={href}
+                    data-umami-event={event}
+                    aria-current={current ? 'page' : undefined}
+                    className={cn(
+                      'text-sm py-2 transition-colors',
+                      current ? 'text-foreground' : 'text-foreground/55 hover:text-foreground'
+                    )}
+                    onClick={() => setOpen(false)}
+                  >
+                    {label}
+                  </a>
+                )
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }

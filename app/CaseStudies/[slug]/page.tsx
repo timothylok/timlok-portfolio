@@ -50,14 +50,10 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         </a>
 
         {/* Header */}
-        <header className="relative overflow-hidden mb-12">
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-clay-500/20" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(160,82,45,0.05),transparent_70%)]" />
-          <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-4">Case Study</p>
-          <h1 className="text-3xl sm:text-4xl font-display font-light tracking-tight text-foreground leading-tight mb-2 [text-wrap:balance]">
+        <header className="mb-12">
+          <h1 className="text-3xl sm:text-4xl font-display font-light tracking-tight text-foreground leading-tight mb-4 [text-wrap:balance]">
             {cs.title}
           </h1>
-          <div className="mt-2 mb-4 h-px w-36 bg-gradient-to-r from-clay-500/50 to-transparent" />
           <p className="text-lg text-foreground/65 leading-relaxed mb-6">{cs.summary}</p>
           <div className="flex flex-wrap gap-2">
             {cs.tags.map((tag) => (

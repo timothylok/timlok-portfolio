@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import { CTA_HEADING, CTA_SUBTEXT } from '@/app/data/site'
 
 export default function CTA() {
   return (
@@ -15,10 +16,10 @@ export default function CTA() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
         <div>
           <p className="text-xl font-display font-medium text-foreground mb-1">
-            Ready to ship something?
+            {CTA_HEADING}
           </p>
           <p className="text-sm text-foreground/65">
-            Available for AI automation, dashboards, and full-stack delivery.
+            {CTA_SUBTEXT}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-4 shrink-0">

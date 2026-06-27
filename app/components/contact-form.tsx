@@ -117,7 +117,7 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <Label htmlFor="link">Link <span className="text-foreground/30">(optional)</span></Label>
+        <Label htmlFor="link">Link <span className="text-muted-foreground">(optional)</span></Label>
         <Input
           id="link"
           value={fields.link}
@@ -135,7 +135,7 @@ export default function ContactForm() {
       <Button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full rounded-full py-3 h-auto bg-white text-black hover:bg-white/90 font-medium mt-1"
+        className="w-full rounded-full py-3 h-auto bg-clay-500 hover:bg-clay-600 text-white border-0 transition duration-200 shadow-[0_1px_8px_rgba(160,82,45,0.30)] hover:shadow-[0_2px_14px_rgba(160,82,45,0.45)] mt-1"
       >
         {status === 'sending' ? 'Sending...' : 'Send message →'}
       </Button>

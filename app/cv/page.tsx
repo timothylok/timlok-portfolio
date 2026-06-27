@@ -16,11 +16,8 @@ export default function CVPage() {
       <div className="max-w-4xl mx-auto px-6 pt-16 pb-24 space-y-14">
 
         {/* Header */}
-        <header className="relative overflow-hidden border-b border-border pb-10">
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-clay-500/20" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(160,82,45,0.05),transparent_70%)]" />
-          <h1 className="text-4xl font-display font-light text-foreground mb-2 [text-wrap:balance]">{SITE_NAME}</h1>
-          <div className="mt-2 mb-4 h-px w-36 bg-gradient-to-r from-clay-500/50 to-transparent" />
+        <header className="border-t-2 border-clay-500/50 border-b border-border pt-8 pb-10">
+          <h1 className="text-4xl font-display font-light text-foreground mb-3 [text-wrap:balance]">{SITE_NAME}</h1>
           <p className="text-foreground/65 mb-5">Auckland, New Zealand · AI Automation Engineer · Technical PM · Multi-Agent Systems Builder</p>
           <div className="flex flex-wrap gap-5 text-sm font-mono text-muted-foreground">
             <a href="https://timlok-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" data-umami-event="CV: Portfolio Link" className="hover:text-foreground/70 transition-colors">timlok-portfolio.vercel.app ↗</a>

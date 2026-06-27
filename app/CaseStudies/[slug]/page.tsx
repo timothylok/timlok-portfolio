@@ -44,24 +44,24 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         {/* Back link */}
         <a
           href="/CaseStudies"
-          className="inline-flex items-center gap-2 text-xs font-mono text-foreground/40 hover:text-foreground/70 transition-colors mb-10"
+          className="inline-flex items-center gap-2 text-xs font-mono text-muted-foreground hover:text-foreground/80 transition-colors mb-10"
         >
           ← All case studies
         </a>
 
         {/* Header */}
         <header className="relative overflow-hidden mb-12">
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-indigo-500/25" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(129,140,248,0.08),transparent_70%)]" />
-          <p className="text-xs font-mono uppercase tracking-widest text-foreground/40 mb-4">Case Study</p>
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-px bg-clay-500/20" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_30%,rgba(160,82,45,0.05),transparent_70%)]" />
+          <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-4">Case Study</p>
           <h1 className="text-3xl sm:text-4xl font-display font-light tracking-tight text-foreground leading-tight mb-2 [text-wrap:balance]">
             {cs.title}
           </h1>
-          <div className="mt-2 mb-4 h-px w-36 bg-gradient-to-r from-indigo-500/50 to-transparent" />
-          <p className="text-lg text-foreground/60 leading-relaxed mb-6">{cs.summary}</p>
+          <div className="mt-2 mb-4 h-px w-36 bg-gradient-to-r from-clay-500/50 to-transparent" />
+          <p className="text-lg text-foreground/65 leading-relaxed mb-6">{cs.summary}</p>
           <div className="flex flex-wrap gap-2">
             {cs.tags.map((tag) => (
-              <span key={tag} className="text-xs font-mono text-foreground/40 bg-white/5 px-2 py-0.5 rounded">
+              <span key={tag} className="text-xs font-mono text-muted-foreground bg-clay-50 border border-clay-100 px-2 py-0.5 rounded">
                 {tag}
               </span>
             ))}

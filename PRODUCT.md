@@ -8,35 +8,65 @@ brand
 
 Two audiences, one message:
 
-- **Hiring managers** evaluating Tim for Technical PM or hybrid technical lead roles — they want evidence of real delivery, not a claims document.
-- **Freelance clients** deciding whether to hire Tim to build something — they want to feel confident the work will ship, fast and at quality.
+- **Hiring managers** evaluating Tim for Technical PM or hybrid technical‑lead roles — they want proof of real delivery, not a glossy pitch.
+- **Freelance clients** deciding whether to trust Tim to build something — they want confidence that the work will ship, quickly and at quality.
 
-Both walk away thinking: *"This person ships real AI-powered products and knows what they're doing. I want to work with them."*
+Both should walk away thinking:
+**"This person ships real AI‑powered products with craft and clarity. I want to work with them."**
 
 ## Product Purpose
 
-Tim Lok's personal portfolio. Technical PM turned AI-first builder — ex-Java developer, now shipping production products with Claude Code as his primary AI tooling. The portfolio is the proof of work, not a résumé with screenshots. Success means a visitor reads two cards and decides to reach out.
+Tim Lok's personal portfolio.
+A technical PM turned AI‑first builder — ex‑Java developer who now ships production products using Claude Code as his primary tool.
+
+The portfolio is not decoration. It is the **evidence**.
+Success means a visitor reads two cards and reaches out.
 
 ## Brand Personality
 
-Builder · Curious · Direct
+Builder · Warm · Precise
 
-Hands-on, pragmatic, gets things done. No hype, no fluff. The voice is confident but not loud — the work is the claim, the copy is the proof. Energy: someone who could explain this to a CTO or a founder, and would use the same words for both.
+Hands‑on, thoughtful, and quietly confident.
+The tone is human and direct — the kind of clarity you'd use with a CTO or a founder, without changing your voice for either.
 
-## Anti-references
+## Brand Aesthetic
 
-- **Generic dark SaaS portfolio** — the dark-background + indigo-accent template that every developer uses. Gradient hero text, amber stats, identical card grids. If someone can guess the design from "developer portfolio" alone, it failed.
-- **Hustle-culture tech bro** — aggressive claims, buzzword-heavy. This brand is quiet confidence, not LinkedIn captions.
-- **Overly designed / showoff** — heavy motion, glassmorphism everywhere, colour explosions. The work is technical; the aesthetic should feel like a thoughtful engineer made it, not a motion designer.
+Warm, crafted, premium.
+A light, supportive background with clay/terracotta accents.
+The palette feels like tools on a workbench — tactile, grounded, and intentional.
+
+No teal.
+No black‑on‑black SaaS tropes.
+No neon gradients.
+
+## Anti‑references
+
+- **Dark SaaS portfolio clones** — black backgrounds, indigo accents, gradient hero text, generic card grids. If someone can guess the design from "developer portfolio," it failed.
+- **Hustle‑culture tech bro** — loud claims, buzzwords, performative energy. This brand is calm authority, not hype.
+- **Over‑designed showpieces** — glassmorphism, heavy motion, rainbow palettes. The work is technical; the aesthetic should feel crafted, not theatrical.
 
 ## Design Principles
 
-1. **The work is the proof** — show real projects with real outcomes. No section exists just to fill space.
-2. **Quiet confidence** — the voice is authoritative without shouting. Direct sentences, no hedging, no hype.
-3. **Builder, not brand** — technical aesthetic that respects the craft. Not cosplaying as a SaaS product page.
-4. **Fast and legible** — every decision serves clarity and speed of comprehension. Visitors scan; make scanning pay off.
-5. **Distinct, not default** — the anti-reference is every other dark developer portfolio. Every design choice should have a reason that isn't "because portfolios look like this."
+1. **The work is the proof** — every section exists to show real outcomes. No filler.
+2. **Quiet confidence** — direct sentences, no hype, no shouting. The warmth comes from tone, not decoration.
+3. **Crafted, not corporate** — a technical aesthetic with human warmth. Clay, terracotta, rust accents on a light, supportive base. Feels like a builder's notebook, not a SaaS landing page.
+4. **Fast and legible** — visitors scan. The design rewards scanning. High contrast, warm neutrals, minimal motion.
+5. **Distinct, not default** — the anti‑reference is every dark developer portfolio. Every design choice has a reason beyond "because portfolios look like this."
 
 ## Accessibility & Inclusion
 
-No specific WCAG target. Keep contrast readable, navigation keyboard-accessible, reduced-motion respected where animations exist.
+No strict WCAG target, but:
+
+- Maintain readable contrast on warm backgrounds
+- Keep navigation keyboard‑accessible
+- Respect reduced‑motion preferences
+- Avoid teal (brand clarity)
+
+## Color Philosophy
+
+- **Base:** warm stone / sand — light, calm, supportive
+- **Accent:** clay / terracotta / rust — used sparingly for hierarchy
+- **Tone:** crafted premium — tactile, human, intentional
+- **Purpose:** the background supports the work; the work carries the weight
+
+Color is not decoration. Color is structure, clarity, and identity.

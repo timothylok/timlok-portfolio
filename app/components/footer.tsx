@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-start justify-between gap-8 text-xs text-foreground/35 font-mono">
+      <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-start justify-between gap-8 text-xs text-muted-foreground font-mono">
         <div className="flex flex-wrap gap-x-6 gap-y-3">
           <a href="/#projects" data-umami-event="Footer: Projects" className="hover:text-foreground/60 transition-colors">Projects</a>
           <a href="/#about" data-umami-event="Footer: About" className="hover:text-foreground/60 transition-colors">About</a>

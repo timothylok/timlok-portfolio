@@ -13,6 +13,18 @@ module.exports = {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],
       },
       colors: {
+        clay: {
+          50:  '#FDF1EC',
+          100: '#F7DDD1',
+          200: '#EBBCA8',
+          300: '#D99476',
+          400: '#C07050',
+          500: '#A0522D',
+          600: '#8B3D1F',
+          700: '#6E2B10',
+          800: '#4A1B08',
+          950: '#1E0A02',
+        },
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         card: {

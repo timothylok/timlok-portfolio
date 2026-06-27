@@ -27,7 +27,7 @@ export default function Projects() {
           initial={{ scale: 0.85, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.15, ease: 'easeOut' }}
-          className="text-xs text-foreground/40 font-mono uppercase tracking-wide"
+          className="text-xs text-muted-foreground font-mono uppercase tracking-wide"
         >
           {filtered.length} shown
         </motion.span>
@@ -43,8 +43,8 @@ export default function Projects() {
             className={cn(
               'text-xs font-mono px-3 py-2.5 rounded-full border transition-colors whitespace-nowrap',
               activeCategory === cat
-                ? 'bg-indigo-500 text-white border-indigo-500'
-                : 'bg-transparent text-foreground/45 border-border hover:border-foreground/25 hover:text-foreground/75'
+                ? 'bg-clay-500 text-white border-clay-500'
+                : 'bg-transparent text-foreground/55 border-border hover:border-clay-500/30 hover:text-foreground/80'
             )}
           >
             {cat}
@@ -54,10 +54,10 @@ export default function Projects() {
 
       {filtered.length === 0 && (
         <div className="py-16 text-center">
-          <p className="text-sm text-foreground/35 font-mono mb-3">No projects in this category.</p>
+          <p className="text-sm text-muted-foreground font-mono mb-3">No projects in this category.</p>
           <button
             onClick={() => setActiveCategory('All')}
-            className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors font-mono"
+            className="text-xs text-clay-500 hover:text-clay-600 transition-colors font-mono"
           >
             Clear filter →
           </button>
@@ -77,8 +77,8 @@ export default function Projects() {
               className={cn(
                 'group bg-card border rounded-xl flex flex-col gap-3 transition-colors duration-200',
                 project.highlight
-                  ? 'p-7 border-indigo-500/40 bg-indigo-950/30 hover:border-indigo-500/60 md:col-span-2'
-                  : 'p-6 border-border hover:border-indigo-500/30'
+                  ? 'p-7 border-clay-500/35 bg-clay-50 hover:border-clay-500/55 md:col-span-2'
+                  : 'p-6 border-border hover:border-clay-500/30'
               )}
             >
               <div className="flex items-start justify-between gap-3">
@@ -90,7 +90,7 @@ export default function Projects() {
                 </h3>
                 <div className="flex items-center gap-2 shrink-0">
                   {project.highlight && (
-                    <span className="text-xs font-mono bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2 py-0.5 rounded-full">
+                    <span className="text-xs font-mono bg-clay-100 text-clay-700 border border-clay-200 px-2 py-0.5 rounded-full">
                       featured
                     </span>
                   )}
@@ -102,8 +102,8 @@ export default function Projects() {
                       className={cn(
                         'text-xs transition-colors',
                         project.highlight
-                          ? 'text-indigo-400/80 hover:text-indigo-300'
-                          : 'text-foreground/35 group-hover:text-foreground/60 hover:!text-indigo-400'
+                          ? 'text-clay-600/80 hover:text-clay-600'
+                          : 'text-foreground/40 group-hover:text-foreground/65 hover:!text-clay-600'
                       )}
                     >
                       case study →
@@ -119,8 +119,8 @@ export default function Projects() {
                       className={cn(
                         'text-xs transition-colors',
                         project.highlight
-                          ? 'text-indigo-400/80 hover:text-indigo-300'
-                          : 'text-foreground/35 group-hover:text-foreground/60 hover:!text-indigo-400'
+                          ? 'text-clay-600/80 hover:text-clay-600'
+                          : 'text-foreground/40 group-hover:text-foreground/65 hover:!text-clay-600'
                       )}
                     >
                       live ↗
@@ -131,7 +131,7 @@ export default function Projects() {
 
               <p className={cn(
                 'text-sm leading-relaxed flex-1',
-                project.highlight ? 'text-foreground/60' : 'text-foreground/50'
+                project.highlight ? 'text-foreground/75' : 'text-foreground/65'
               )}>
                 {project.description}
               </p>
@@ -140,7 +140,7 @@ export default function Projects() {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs font-mono text-foreground/35 bg-white/[0.04] border border-border px-2 py-1 rounded"
+                    className="text-xs font-mono text-muted-foreground bg-clay-50 border border-clay-100 px-2 py-1 rounded"
                   >
                     {tag}
                   </span>

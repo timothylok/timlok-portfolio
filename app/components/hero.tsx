@@ -7,9 +7,12 @@ import { projects } from '@/app/data/projects'
 const CAREER_START_DATE = new Date(1998, 0, 1)
 const yearsExperience = Math.floor((Date.now() - CAREER_START_DATE.getTime()) / (1000 * 60 * 60 * 24 * 365.25))
 
+const AI_BUILDING_START_DATE = new Date(2024, 5, 1)
+const monthsAI = Math.floor((Date.now() - AI_BUILDING_START_DATE.getTime()) / (1000 * 60 * 60 * 24 * 30.44))
+
 const stats = [
   { value: String(projects.length), label: 'projects shipped' },
-  { value: '18 mo', label: 'building with AI' },
+  { value: `${monthsAI} mo`, label: 'building with AI' },
   { value: `${yearsExperience} yr`, label: 'Software development & Project Management' },
 ]
 

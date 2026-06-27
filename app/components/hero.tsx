@@ -4,9 +4,13 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { projects } from '@/app/data/projects'
 
+const CAREER_START_DATE = new Date(1998, 0, 1)
+const yearsExperience = Math.floor((Date.now() - CAREER_START_DATE.getTime()) / (1000 * 60 * 60 * 24 * 365.25))
+
 const stats = [
   { value: String(projects.length), label: 'projects shipped' },
   { value: '18 mo', label: 'building with AI' },
+  { value: `${yearsExperience} yr`, label: 'Software development & Project Management' },
 ]
 
 const fadeUp = (delay = 0) => ({
@@ -83,7 +87,7 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.45 }}
         className="mt-16 border-t border-border pt-12"
       >
-        <div className="grid grid-cols-2 gap-8 max-w-xs">
+        <div className="grid grid-cols-3 gap-x-10 gap-y-4 max-w-lg">
           {stats.map((stat) => (
             <div key={stat.label}>
               <p className="text-2xl font-display font-medium text-clay-600 mb-1">{stat.value}</p>

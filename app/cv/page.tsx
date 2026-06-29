@@ -172,7 +172,7 @@ export default function CVPage() {
               <p className="text-sm text-foreground/70">Microsoft</p>
               <p className="text-xs font-mono text-muted-foreground mt-1">Credential ID: 85466DAB8F398098</p>
             </div>
-            <span className="text-xs font-mono text-muted-foreground shrink-0">Jun 2024 · Expires Jun 2025</span>
+            <span className="text-xs font-mono text-muted-foreground shrink-0">Certified Jun 2024</span>
           </div>
         </section>
 

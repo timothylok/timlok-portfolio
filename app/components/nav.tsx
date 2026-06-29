@@ -43,7 +43,7 @@ export default function Nav() {
                 aria-current={current ? 'page' : undefined}
                 className={cn(
                   'transition-colors',
-                  current ? 'text-foreground' : 'text-foreground/45 hover:text-foreground'
+                  current ? 'text-foreground' : 'text-foreground/60 hover:text-foreground'
                 )}
               >
                 {label}

@@ -103,7 +103,7 @@ export default function Projects() {
                         'text-xs transition-colors',
                         project.highlight
                           ? 'text-clay-600/80 hover:text-clay-600'
-                          : 'text-foreground/40 group-hover:text-foreground/65 hover:!text-clay-600'
+                          : 'text-foreground/55 group-hover:text-foreground/75 hover:!text-clay-600'
                       )}
                     >
                       case study →

@@ -986,6 +986,101 @@ export const caseStudies: CaseStudy[] = [
     ],
   },
   {
+    slug: 'impeccable-design-workflow',
+    title: 'Impeccable — AI‑Driven Design That Elevates Every Build',
+    summary: 'Systematic AI‑powered design workflow embedded in every build — improved portfolio design score from 28 → 33 through structured critique cycles, iteration scoring, and visual hierarchy guidance.',
+    tags: ['Claude Code', 'AI Tooling', 'Design System', 'Next.js'],
+    sections: [
+      {
+        heading: 'Overview',
+        paragraphs: [
+          'Impeccable is a systematic, AI‑powered design workflow that helps builders craft beautiful, strategic, and consistent product design — without needing deep design expertise. It acts like having a designer at your side: guiding structure, layout, spacing, typography, and visual hierarchy while keeping everything aligned with product strategy.',
+          'I adopted Impeccable early in my portfolio redesign. What started as an experiment quickly became a core part of my build process. My site went through multiple iterations, improving its design score from 28 → 33, and continues to improve. Best of all, the tool is free — and now it\'s part of my permanent skillset.',
+        ],
+      },
+      {
+        heading: 'The Challenge',
+        paragraphs: [
+          'As an AI builder and technical PM, I move fast. I ship systems, pipelines, and full‑stack apps quickly — but design is traditionally a bottleneck. Good design requires:',
+        ],
+        bullets: [
+          'Visual hierarchy',
+          'Spacing discipline',
+          'Typography choices',
+          'Layout consistency',
+          'Strategic alignment with product goals',
+        ],
+      },
+      {
+        heading: 'The Solution: Impeccable',
+        paragraphs: [
+          'These are areas where most builders either slow down or rely heavily on designers. I needed a way to maintain speed without sacrificing design quality.',
+          'Impeccable provides a structured, repeatable design review process powered by AI agents. Instead of guessing, I get:',
+        ],
+        bullets: [
+          'Clear design critiques',
+          'Actionable improvement steps',
+          'Strategic alignment checks',
+          'Visual hierarchy guidance',
+          'Iteration scoring to measure progress',
+        ],
+      },
+      {
+        heading: 'How I Used It',
+        paragraphs: [
+          'It\'s not just "AI giving feedback." It\'s a design system that teaches you how to think like a designer — while letting you stay in builder mode.',
+          'I applied Impeccable to my portfolio redesign. Each iteration followed the same loop: generate a design review, apply improvements, re‑score the design, and repeat until the design feels cohesive and intentional. This loop helped refine:',
+        ],
+        bullets: [
+          'Hero section clarity',
+          'Typography hierarchy',
+          'Spacing rhythm',
+          'Section structure',
+          'Visual consistency across components',
+          'CTA placement and emphasis',
+          'Project card layout and readability',
+        ],
+      },
+      {
+        heading: 'Results',
+        paragraphs: [
+          'The result: a cleaner, more strategic, more professional portfolio — built without needing a dedicated designer.',
+        ],
+        bullets: [
+          'Design score improved from 28 → 33',
+          'Clearer hierarchy and readability',
+          'Stronger alignment between design and product strategy',
+          'More polished presentation of projects and services',
+          'Faster iteration cycles',
+          'Zero cost — the tool is free',
+          'Now part of my everyday build workflow',
+        ],
+      },
+      {
+        heading: 'Why This Matters for Clients',
+        paragraphs: [
+          'Impeccable didn\'t just improve my site. It improved how I build.',
+          'This workflow is now embedded in my delivery process. When I build AI systems, MVPs, or automation pipelines, I also ensure:',
+        ],
+        bullets: [
+          'The product looks professional',
+          'The design supports the strategy',
+          'The UI feels intentional',
+          'The experience is cohesive',
+          'Iterations are fast and measurable',
+        ],
+      },
+      {
+        heading: 'Conclusion',
+        paragraphs: [
+          'Clients don\'t just get a working system — they get a system that looks and feels right, without needing a designer on day one. Impeccable gives me a design partner that scales with me. And now, it scales with every client I work with.',
+          'Impeccable has become part of my skillset: a design‑thinking engine that enhances every build. It lets me ship faster, iterate smarter, and deliver products that are both functional and beautifully crafted — even when design details are unclear at the start.',
+          'It\'s systematic. It\'s strategic. It\'s free. And it\'s now part of how I build.',
+        ],
+      },
+    ],
+  },
+  {
     slug: 'claude-md-engineering-contract',
     title: 'CLAUDE.md — Engineering Contract',
     summary: 'A governing contract for AI agent behaviour: role rules, no-self-verification enforcement, mandatory chunked reads, pipeline definitions, and QC gates — the difference between a system prompt and an engineering contract.',
